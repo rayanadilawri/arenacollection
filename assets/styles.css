@@ -1,0 +1,34 @@
+body {
+    --base-size: 12px;
+    --gutter: calc(3 x var(--base-size));
+   
+    --color--primary: #fbfbfb;
+    --color--secondary:#2D6115;
+    --color--background:BLACK; 
+    
+    --title-size: 100px;
+    --body-size: 20px;
+    
+
+}
+
+   body {
+       background-color: var(--color--primary);
+       font-size: var(--body-size);
+   }
+
+   h1 {
+    font-size: var(--title-size);
+   }
+
+   header {
+       padding-inline: var(--gutter-size);
+       padding-block: calc(5 * var(--base-size));
+   }
+   
+   #main-content {
+    block-size: 75vh;
+    padding-top:  var(--base-size);
+    padding-bottom: calc(2 * var(--base-size)
+   }
+
