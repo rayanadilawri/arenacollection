@@ -33,6 +33,8 @@ button {
        padding-block: calc(5 * var(--base-size));
    }
    
-  
+   .image-block {
+    background-color: yellow;
+   }
 
 
