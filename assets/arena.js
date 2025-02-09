@@ -25,8 +25,19 @@ markdownItScript.onload = () => {
             console.log(data);
             placeChannelInfo(data)
 
-            let myFunction = () => {
-                console.log('test')
+            let myFunction = (block) => {
+                if (block.class == 'Text') {
+                    console.log('text')
+                } else if (block.class == 'Link') {
+                    console.log('link')
+                } else if (block.class == 'Media') {
+                    console.log('media')
+                } else if (block.class == 'Image') {
+                    console.log('image')
+                } else if (block.class == 'Attachment') {
+                   console.log('attachment')
+               } else if (attachment.includes('pdf')) {
+               }
             }
 
             data.contents.forEach(myFunction) 
