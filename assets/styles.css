@@ -1,4 +1,5 @@
 body {
+    --spacing: 2em;
     --base-size: 12px;
     --gutter: calc(3 x var(--base-size));
    
@@ -37,4 +38,6 @@ button {
     background-color: yellow;
    }
 
-
+.smalldate {
+    font-size: 0.8em;
+}
