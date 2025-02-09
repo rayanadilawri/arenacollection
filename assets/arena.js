@@ -23,7 +23,13 @@ markdownItScript.onload = () => {
         .then((response) => response.json()) // Return it as JSON data
         .then((data) => { 
             console.log(data);
-            placeChannelInfo(data);
-            console.log(data.contents);
-        })     
+            placeChannelInfo(data)
+
+            let myFunction = () => {
+                console.log('test')
+            }
+
+            data.contents.forEach(myFunction) 
+                
+            })    
 };
