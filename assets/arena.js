@@ -40,7 +40,7 @@ console.log (block);
 			`
 			<li>
 				 <section class="block">
-                <div class="link-block"> ${block.source.url}
+                <div class="link-block"> ${block.title} 
                 </div>
             </section>
 			</li>
@@ -72,7 +72,7 @@ console.log (block);
 	}
 
 	// Uploaded (not linked) media…
-	else if (block.class == 'Attachment') {
+    else if (block.class == 'Attachment') {
 		let attachment = block.attachment.content_type // Save us some repetition
 
 		// Uploaded videos!
@@ -92,23 +92,30 @@ console.log (block);
 
 		// Uploaded PDFs!
 		else if (attachment.includes('pdf')) {
-			// …up to you!
+		
 		}
 
-		// Uploaded audio!
-		else if (attachment.includes('audio')) {
-			// …still up to you, but here’s an `audio` element:
-			let audioItem =
-				`
-				<li>
-					<p><em>Audio</em></p>
-					<audio controls src="${ block.attachment.url }"></audio>
-				</li>
-				`
-			channelBlocks.insertAdjacentHTML('beforeend', audioItem)
-			// More on audio: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio
-		}
-	}
+// Uploaded audio!
+else if (attachment.includes('audio')) {
+    // …still up to you, but here’s an `audio` element:
+    let audioItem =
+        `
+        <li>
+			 <section class="block">
+                <div class="attachment-block"> <audio controls src="${block.attachment.url}"></audio>
+                </div>
+            </section>
+		</li>
+	
+        `
+    channelBlocks.insertAdjacentHTML('beforeend', audioItem)
+    // More on audio: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio
+
+}
+
+}
+
+
 
 	// Linked media…
 	else if (block.class == 'Media') {
