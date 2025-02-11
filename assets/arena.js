@@ -32,14 +32,15 @@ let placeChannelInfo = (data) => {
 let renderBlock = (block) => {
 	// To start, a shared `ul` where we’ll insert all our blocks
 	let channelBlocks = document.querySelector('#channel-blocks')
-
-	// Links!
+console.log (block);
+	
+// Links!
 	if (block.class == 'Link') {
 		let linkItem =
 			`
 			<li>
 				 <section class="block">
-                <div class="link-block">
+                <div class="link-block"> ${block.source.url}
                 </div>
             </section>
 			</li>
@@ -50,16 +51,24 @@ let renderBlock = (block) => {
 	// Images!
 	if (block.class == 'Image') {
 		let linkItem =
-		    `<section class="block">
-            <li class="image-block">
-            </li>
+		    `<li>
+				 <section class="block">
+                <div class="image-block"> <img src="${block.image.thumb.url}">
+                </div>
             </section>
+			</li>
 			`
 		channelBlocks.insertAdjacentHTML('beforeend', linkItem)
 	}
 	// Text!
 	else if (block.class == 'Text') {
-		console.log(block)
+		let linkItem =
+        `<section class="block">
+            <li class="text-block"> ${block.content_html}
+                <p> Quote from Arena</p>
+            </li>
+             </section>`
+             channelBlocks.insertAdjacentHTML('beforeend', linkItem)
 	}
 
 	// Uploaded (not linked) media…
@@ -93,7 +102,7 @@ let renderBlock = (block) => {
 				`
 				<li>
 					<p><em>Audio</em></p>
-					<audio controls src="${ block.attachment.url }"></video>
+					<audio controls src="${ block.attachment.url }"></audio>
 				</li>
 				`
 			channelBlocks.insertAdjacentHTML('beforeend', audioItem)
