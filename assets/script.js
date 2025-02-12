@@ -2,7 +2,7 @@ var paintingImages = [
     'images/painting1.png', 'images/painting2.png', 'images/painting3.png', 
     'images/painting4.png', 'images/painting5.png', 'images/painting6.png', 
     'images/painting7.png', 'images/painting8.png', 'images/painting9.png', 
-    'images/painting10.png'
+    'images/painting10.png', 'images/painting11.png'
 ];
 
 const randomPainting = document.getElementById('paintingimages');
