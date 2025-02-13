@@ -43,7 +43,7 @@ console.log (block);
 					<picture>
 						<source srcset="${ block.image.thumb.url }">
 						<source srcset="${ block.image.large.url }">
-						<img src="${ block.	image.original.url }">
+						<img src="${ block.image.thumb.url }">
 					</picture>
 					<h3>${ block.title }</h3>
 					${ block.description_html }
