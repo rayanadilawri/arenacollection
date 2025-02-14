@@ -103,7 +103,7 @@ else if (attachment.includes('audio')) {
 // …still up to you, but here’s an `audio` element:
 let audioItem =
 `
-  <li class="audio-block">
+  <li class=audio-block>
     <p><em>Audio</em></p>
     <audio controls src="${ block.attachment.url }"></audio>
   </li>
@@ -173,20 +173,3 @@ data.collaborators.forEach((collaborator) => renderUser(collaborator, channelUse
 renderUser(data.user, channelUsers)
 })
 
-let mediaElements = document.querySelectorAll(
-    '.block img, .block video, .block iframe, .block audio, .block picture'
-  );
-  
-  mediaElements.forEach(el => {
-    el.style.width = '200px';
-    el.style.height = '200px';
-    el.style.objectFit = 'cover';
-  });
-  
-
-  let textElements = document.querySelectorAll('.block');
-  textElements.forEach(el => {
-    el.style.display = 'block';
-    el.style.width = '200px';
-    el.style.textAlign = 'center';
-  });
