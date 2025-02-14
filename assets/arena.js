@@ -103,10 +103,10 @@ else if (attachment.includes('audio')) {
 // …still up to you, but here’s an `audio` element:
 let audioItem =
 `
-<li>
-<p><em>Audio</em></p>
-<audio controls src="${ block.attachment.url }"></audio>
-</li>
+  <li class="audio-block">
+    <p><em>Audio</em></p>
+    <audio controls src="${ block.attachment.url }"></audio>
+  </li>
 `
 channelBlocks.insertAdjacentHTML('beforeend', audioItem)
 // More on audio: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio
@@ -172,3 +172,21 @@ let channelUsers = document.querySelector('#channel-users') // Show them togethe
 data.collaborators.forEach((collaborator) => renderUser(collaborator, channelUsers))
 renderUser(data.user, channelUsers)
 })
+
+let mediaElements = document.querySelectorAll(
+    '.block img, .block video, .block iframe, .block audio, .block picture'
+  );
+  
+  mediaElements.forEach(el => {
+    el.style.width = '200px';
+    el.style.height = '200px';
+    el.style.objectFit = 'cover';
+  });
+  
+
+  let textElements = document.querySelectorAll('.block');
+  textElements.forEach(el => {
+    el.style.display = 'block';
+    el.style.width = '200px';
+    el.style.textAlign = 'center';
+  });

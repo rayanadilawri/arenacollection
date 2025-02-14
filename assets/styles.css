@@ -64,11 +64,16 @@ button {
     text-align: center; 
   }
 
-
-  .square {
-    position: absolute;
-    width: 350px;
-    height: 350px;
-    top: 45%; 
-    left: 40%; } 
+    .block  
+ {
+      display: block;
+      width: 200px;
+      text-align: center;
+      
+    }
+    
+    .audio-block audio {
+      width: 100px;
+      height: 200px;
+    }
 
