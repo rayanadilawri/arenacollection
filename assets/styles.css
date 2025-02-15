@@ -56,8 +56,8 @@ header {
 }
 
 #channel-blocks li {
-  width: 250px;
-  height: 250px;
+  width: 110px;
+  height: 110px;
   border-radius: 50%;
   margin: 20px;
   position: relative;
@@ -71,9 +71,9 @@ header {
 
 #channel-blocks li:hover {
   border-radius: 0%; 
-border: 20px solid var(--color--tertiary);
-  width: 270px;
-  height: 270px;
+border: 10px solid var(--color--tertiary);
+  width: 220px;
+  height: 220px;
 
 }
 
@@ -117,7 +117,6 @@ a {
 }
 
 
-
 /* buttons */ 
 .show-link li {
   display: none;
@@ -131,6 +130,20 @@ a {
   display: block;
 } 
 
+
+.image-scroll-container {
+  display: flex; 
+  flex-direction: row;
+  overflow-x: auto; 
+  gap: 50px; 
+  padding: 20px;
+  filter: blur(10px);
+}
+
+.image-scroll-container:hover {
+  filter: blur(0);
+}
+
 /* shape inspired by https://codepen.io/huichops/pen/gObbxyw*/
 
 
@@ -140,4 +153,5 @@ a {
 
 next steps: 
 /* add some type of overlay to green blocks*/
+/* figure out how to make sideways scroll gallery smaller*/ 
 

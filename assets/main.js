@@ -2,14 +2,19 @@
 let channelBlocks = document.querySelector('#channel-blocks');
 let showlLinksButton = document.querySelector('#show-links-button');
 let showlAllButton = document.querySelector('#show-all-button');
+let showVideoButton = document.querySelector('#show-Video-button');
 
 // add onlick event to my buttons
 showLinksButton.onclick = () => {
 channelBlocks.classList.add('show-links')
 }
 
+showVideoButton.onclick = () => {
+    channelBlocks.classList.add('show-video')
+    }
+
 showlAllButton.onclick = () => {
-    channelBlocks.classList.remove('show-links')
+    channelBlocks.classList.remove('show-links', 'show-video')
 }
 
 //suggest by co pilot - trying to figure out errors 
