@@ -13,7 +13,7 @@ showlAllButton.onclick = () => {
 }
 
 
-
+//suggest by co pilot - trying to figure out errors 
 
 // document.addEventListener('DOMContentLoaded', () => {
    // Select the buttons
