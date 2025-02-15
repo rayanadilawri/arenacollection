@@ -102,3 +102,15 @@ button {
   display: block;
 }
 
+#channel-blocks li {
+  width: 250px; 
+  height: 250px;  
+  border-radius: 0 160px;  
+  margin: 20px;  
+  display: inline-block; 
+  position: relative; 
+  background-color: greenyellow;  
+}
+/* source: https://codepen.io/yochans/pen/vYxPdKz */
+
+
