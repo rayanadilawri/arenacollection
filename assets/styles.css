@@ -1,138 +1,136 @@
-.oddity-script
-{ font-family: "oddity-script", sans-serif;
-font-weight: 300;
-font-style: normal;
-font-size: var(--big-size);
-} 
-
 :root {
-    --big-size: 2em;
-  }
-  
-
-  h1 {
-    font-size: 0.8em; 
-  }
-  
-  h1 span {
-    font-size: var(--big-size);
-  }
-  
-
-body {
-    --spacing: 2em;
-    --base-size: 12px;
-    --gutter: calc(3 x var(--base-size));
-   
-    --color--primary: #black;
-    --color--secondary:greenyellow;
-    --color--background:white; 
-    
-    --title-size: 100px;
-    --body-size: 20px;
-    
-
+  --big-size: 2em;
+  --spacing: 2em;
+  --base-size: 12px;
+  --gutter: calc(3 * var(--base-size)); 
+  --color--primary: #000; 
+  --color--secondary: rgb(138, 216, 22);
+  --color--background: white;
+  --color--tertiary: rgb(60, 4, 4);
+  --title-size: 100px;
+  --body-size: 20px;
 }
 
 body {
+  font-size: var(--body-size);
   background-image: url('../images/default.jpg');
-  background-attachment: fixed; /* Keeps the image fixed in place when scrolling */
-  background-size: cover; /* Makes sure the image covers the entire screen */
-  background-position: center; /* Centers the image */
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--color--background); /* Added background color */
 }
 
+h1 {
+  font-size: var(--title-size);
+  color: var(--color--secondary);
+  text-align: center;
+}
 
+h1 span {
+  font-size: var(--big-size);
+}
+
+.oddity-script {
+  font-family: "oddity-script", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: var(--big-size);
+}
 
 button {
-	background-color: var(--color--secondary);
+  background-color: var(--color--secondary);
   color: var(--color--primary);
-	padding: 10px;
+  padding: 10px;
   cursor: pointer;
 }
 
-   body {
-       font-size: var(--body-size);
-   }
-
-   h1 {
-    font-size: var(--title-size);
-    color: var(--color--secondary);
-   }
-
-   header {
-       padding-inline: var(--gutter-size);
-       padding-block: calc(5 * var(--base-size));
-   }
-   
-
-
-  h1 {
-    font-size: var(--title-size);
-    color: var(--color--secondary);
-    text-align: center; 
-  }
-
-  #channel-blocks li {
- 
-      display: block;
-      width: 200px;
-      text-align: center;
-      
-    }
-    
-    .audio-block audio {
-      width: 280px;
-      height: 200px;
-    }
-
-
-   
-.video-block video {
-  width: 100%;  
-  max-width: 200px; /* Limits the video size to a reasonable max width */
-  height: auto;  /* Keeps the aspect ratio intact */
-  display: block; /* Removes any space below the video */
+header {
+  padding-inline: var(--gutter);
+  padding-block: calc(5 * var(--base-size));
 }
- 
+
+#channel-blocks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+#channel-blocks li {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  margin: 20px;
+  position: relative;
+  background-color: var(--color--secondary);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+#channel-blocks li:hover {
+  border-radius: 0%; 
+border: 20px solid var(--color--tertiary);
+  width: 270px;
+  height: 270px;
+
+}
+
+#channel-blocks li .content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: cover;
+}
+
+
+.audio-block audio {
+  width: 280px;
+  height: 200px;
+}
+
+.video-block video {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  display: block;
+}
+
+
+.nav-links {
+  display: flex; 
+  justify-content: center; 
+  gap: 40px;
+  background-color: var(--color--secondary);
+  width: 100%;  
+  top: 0;
+}
+
+a {
+  text-decoration: none; 
+  color: black; 
+  font-size: 1.2em;
+}
+
+
+
+/* buttons */ 
 .show-link li {
   display: none;
 }
 
-.show-video li .video-block {
+.show-link li .link-block {
   display: block;
 }
 
-#channel-blocks {
-  display: flex; 
-  flex-wrap: wrap; 
-  gap: 20px; 
-}
+.show-link li {
+  display: block;
+} 
 
-#channel-blocks li {
-  width: 250px; 
-  height: 250px;  
-  border-radius: 50%;  
-  margin: 20px;  
-  position: relative; 
-  background-color: greenyellow;  
-  overflow: hidden;  
-  display: flex; 
-  justify-content: center; 
-  align-items: center; 
-}
-
-#channel-blocks li::before {
-  content: ''; 
-  position: absolute; 
-  top: 0; 
-  left: 0; 
-  width: 100%; 
-  height: 100%; 
-  background-color: rgba(0, 0, 0, 0.5); 
-  z-index: 1; 
-  opacity: 0; 
-  transition: opacity 0.3s; 
-}
 /* shape inspired by https://codepen.io/huichops/pen/gObbxyw*/
 
 
