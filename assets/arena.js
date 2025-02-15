@@ -35,7 +35,7 @@ console.log(block);
 if (block.class == 'Link') {
 let linkItem =
 `
-<li>
+<li class="link-block">
 <p><em>Link</em></p>
 <picture>
 <source srcset="${ block.image.thumb.url }">
@@ -53,10 +53,9 @@ channelBlocks.insertAdjacentHTML('beforeend', linkItem);
 // Images!
 else if (block.class == 'Image') {
 let linkItem =
-   `<li>
-<section class="block">
-                <div class="image-block"> <img src="${block.image.thumb.url}">
-                </div>
+   `<li class="image-block">
+                <li class="image-block"> <img src="${block.image.thumb.url}">
+                </li>
             </section>
 </li>
 `
@@ -66,7 +65,7 @@ channelBlocks.insertAdjacentHTML('beforeend', linkItem)
 // Text!
 else if (block.class == 'Text') {
 let linkItem =
-        `<section class="block">
+           `
             <li class="text-block"> ${block.content_html}
                 <p> Quote from Arena</p>
             </li>
@@ -81,18 +80,14 @@ let attachment = block.attachment.content_type // Save us some repetition
 
 // Uploaded videos!
 if (attachment.includes('video')) {
-// …still up to you, but we’ll give you the `video` element:
-let videoItem =
-`
-<li>
-<p><em>Video</em></p>
-<video controls src="${ block.attachment.url }"></video>
-</li>
-`
-channelBlocks.insertAdjacentHTML('beforeend', videoItem)
-// More on video, like the `autoplay` attribute:
-// https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video
+  let videoItem = `
+    <li class="video-block">
+      <video controls src="${block.attachment.url}"></video>
+    </li>
+  `;
+  channelBlocks.insertAdjacentHTML('beforeend', videoItem);
 }
+
 
 // Uploaded PDFs!
 // else if (attachment.includes('pdf')) {
@@ -103,8 +98,7 @@ else if (attachment.includes('audio')) {
 // …still up to you, but here’s an `audio` element:
 let audioItem =
 `
-  <li class=audio-block>
-    <p><em>Audio</em></p>
+  <li class="audio-block">
     <audio controls src="${ block.attachment.url }"></audio>
   </li>
 `
@@ -124,6 +118,7 @@ if (embed.includes('video')) {
 let linkedVideoItem =
 `
 <li>
+<li class="link-block">
 <p><em>Linked Video</em></p>
 ${ block.embed.html }
 </li>

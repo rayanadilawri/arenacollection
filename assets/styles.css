@@ -36,9 +36,8 @@ body {
 button {
 	background-color: var(--color--secondary);
   color: var(--color--primary);
-	border-radius: calc(var(--base) / 2);
-	cursor: pointer; 
-	padding: calc(var(--base) / 2);
+	padding: 10px;
+  cursor: pointer;
 }
 
    body {
@@ -64,8 +63,8 @@ button {
     text-align: center; 
   }
 
-    .block  
- {
+  #channel-blocks li {
+ 
       display: block;
       width: 200px;
       text-align: center;
@@ -73,7 +72,23 @@ button {
     }
     
     .audio-block audio {
-      width: 100px;
+      width: 280px;
       height: 200px;
     }
 
+
+   
+.video-block video {
+  width: 100%;  
+  max-width: 200px; /* Limits the video size to a reasonable max width */
+  height: auto;  /* Keeps the aspect ratio intact */
+  display: block; /* Removes any space below the video */
+}
+ 
+.show-link li {
+  display: none;
+}
+
+.show-video li .video-block {
+  display: block;
+}
