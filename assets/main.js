@@ -12,7 +12,6 @@ showlAllButton.onclick = () => {
     channelBlocks.classList.remove('show-links')
 }
 
-
 //suggest by co pilot - trying to figure out errors 
 
 // document.addEventListener('DOMContentLoaded', () => {

@@ -114,10 +114,13 @@ button {
 }
 /* source: https://codepen.io/yochans/pen/vYxPdKz */
 
-#channel-blocks {
-  width: 100vw; 
-  height: 100vh;  
+#channel-blocks li .content {
+  width: 200%; 
+  height: 200%;  
+  position: center;
  
 }
 
+next steps: 
+/* add some type of overlay to green blocks*/
 
