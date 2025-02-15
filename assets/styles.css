@@ -110,7 +110,14 @@ button {
   display: inline-block; 
   position: relative; 
   background-color: greenyellow;  
+  overflow: hidden;
 }
 /* source: https://codepen.io/yochans/pen/vYxPdKz */
+
+#channel-blocks {
+  width: 100vw; 
+  height: 100vh;  
+ 
+}
 
 
