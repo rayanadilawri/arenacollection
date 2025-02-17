@@ -40,7 +40,6 @@ h1 span {
 button {
   background-color: var(--color--secondary);
   color: var(--color--primary);
-  padding: 10px;
   cursor: pointer;
 }
 
@@ -77,6 +76,7 @@ border: 10px solid var(--color--tertiary);
 
 }
 
+
 #channel-blocks li .content {
   width: 100%;
   height: 100%;
@@ -101,7 +101,7 @@ border: 10px solid var(--color--tertiary);
 }
 
 
-.nav-links {
+header {
   display: flex; 
   justify-content: center; 
   gap: 40px;
@@ -154,4 +154,5 @@ a {
 next steps: 
 /* add some type of overlay to green blocks*/
 /* figure out how to make sideways scroll gallery smaller*/ 
+/* why are images going back into circle shape when you hover over brown frame*/
 

@@ -54,10 +54,16 @@ channelBlocks.insertAdjacentHTML('beforeend', linkItem);
 else if (block.class == 'Image') {
 let linkItem =
    `<li class="image-block">
+    <button> 
                 <li class="image-block"> <img src="${block.image.thumb.url}">
+             </button>
+                  <dialog id="diaglog">
+            <p> I am a modal overlay!</p>
+            <button class="close"> Close</button>
+        </dialog>
+       
                 </li>
-            </section>
-</li>
+            
 `
 channelBlocks.insertAdjacentHTML('beforeend', linkItem)
 }
@@ -148,6 +154,18 @@ let userAddress =
 container.insertAdjacentHTML('beforeend', userAddress)
 }
 
+// let initInteraction = () => {
+ // let imageBlocks = document.querySelectorAll('.image-block') 
+ // imageBlocks.forEach((block) => {
+  //  let openButton = block.querySelector('button')
+  //  let dialog = block.querySelector('dialog')
+
+  //  openButton.onclick = () => {
+  //    dialog.showModal()
+  //  }
+//  }
+// }
+
 
 // Now that we have said what we can do, go get the data:
 fetch(`https://api.are.na/v2/channels/${channelSlug}?per=100`, { cache: 'no-store' })
@@ -161,6 +179,8 @@ data.contents.reverse().forEach((block) => {
 // console.log(block) // The data for a single block
 renderBlock(block) // Pass the single block data to the render function
 })
+
+initInteraction()
 
 // Also display the owner and collaborators:
 let channelUsers = document.querySelector('#channel-users') // Show them together
