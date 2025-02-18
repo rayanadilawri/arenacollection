@@ -54,7 +54,7 @@ let renderBlock = (block) => {
             <li class="image-block">
                 <button> 
                     <figure>
-                        <img src="${block.image.thumb.url}">
+                        <img src="${block.image.large.url}">
                     </figure>
                 </button>
                 <dialog>
@@ -66,7 +66,7 @@ let renderBlock = (block) => {
                     <button class="close"> Close</button>
                 </dialog>
             </li>
-        `;
+        `
         channelBlocks.insertAdjacentHTML('beforeend', linkItem);
     }
 
