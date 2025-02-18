@@ -71,11 +71,21 @@ header {
 
 #channel-blocks li:hover {
   border-radius: 0%; 
-border: 10px solid var(--color--tertiary);
+/* border: 10px solid var(--color--tertiary);  */
   width: 220px;
   height: 220px;
 }
+/* .clicked-img{
+  width: 220px;
+  height: 220px;
+} */
 
+dialog{
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  z-index: 5000000;
+}
 
 #channel-blocks li .content {
   width: 100%;
@@ -117,18 +127,32 @@ a {
 
 
 /* buttons */ 
-.show-link li {
+#channel-blocks.show-links .link-block {
+  display: block;
+}
+
+#channel-blocks.show-links .video-block,
+#channel-blocks.show-links .image-block,
+#channel-blocks.show-links .audio-block {
   display: none;
 }
 
-.show-link li .link-block {
+#channel-blocks.show-video .video-block {
   display: block;
 }
 
-.show-link li {
-  display: block;
-} 
+#channel-blocks.show-video .link-block,
+#channel-blocks.show-video .image-block,
+#channel-blocks.show-video .audio-block {
+  display: none;
+}
 
+#channel-blocks .link-block,
+#channel-blocks .video-block,
+#channel-blocks .image-block,
+#channel-blocks .audio-block {
+  display: block;
+}
 
 .image-scroll-container {
   display: flex; 
@@ -156,7 +180,6 @@ dialog [open] {
 
 
 
-next steps: 
 
 /* CSS ISSUES */ 
 /* why are images going back into circle shape when you hover over brown frame*/
@@ -165,6 +188,8 @@ next steps:
 
 
 /*JS ISSUES*/
+
 /* fix buttons on gallery page - why arent they working */ 
+
 /* why are some <li> classes empty (show in inspect mode) and how do i remove them*/
 /*modal isnt coming up - its showing inside the block - how do i geti t to appear outside the block like the loom example*/

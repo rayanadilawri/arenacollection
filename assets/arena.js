@@ -54,7 +54,7 @@ let renderBlock = (block) => {
             <li class="image-block">
                 <button> 
                     <figure>
-                        <img src="${block.image.large.url}">
+                        <img id="img-dis" src="${block.image.large.url}">
                     </figure>
                 </button>
                 <dialog>
@@ -62,7 +62,10 @@ let renderBlock = (block) => {
                  <p> ${block.title}</p>
                  <p> ${block.description_html}</p>
                 </div>
+                <div>
                 <img src="${block.image.large.url}">
+                </div>
+                
                     <button class="close"> x </button>
                 </dialog>
             </li>
@@ -70,6 +73,7 @@ let renderBlock = (block) => {
         channelBlocks.insertAdjacentHTML('beforeend', linkItem);
     }
 
+    
     // Text!
     else if (block.class == 'Text') {
         let linkItem = `
@@ -119,7 +123,7 @@ let renderBlock = (block) => {
         if (embed.includes('video')) {
             // …still up to you, but here’s an example `iframe` element:
             let linkedVideoItem = `
-                <li class="link-block">
+                <li class="video-block" id="video">
                     <p><em>Linked Video</em></p>
                     ${block.embed.html}
                 </li>

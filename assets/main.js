@@ -1,11 +1,13 @@
 // javascript to know about my buttons and my elements 
-let channelBlocks = document.querySelector('#channel-blocks');
-let showlLinksButton = document.querySelector('#show-links-button');
+let channelBlocks = document.getElementById('channel-blocks');
+let showLinksButton = document.getElementById('show-links-button');
 let showlAllButton = document.querySelector('#show-all-button');
-let showVideoButton = document.querySelector('#show-Video-button');
+let showVideoButton = document.querySelector('show-video-button');
+let showImage = document.getElementById('show-image-button');
 
 // add onlick event to my buttons
 showLinksButton.onclick = () => {
+    console.log("testing")
 channelBlocks.classList.add('show-links')
 }
 
@@ -17,40 +19,10 @@ showlAllButton.onclick = () => {
     channelBlocks.classList.remove('show-links', 'show-video')
 }
 
-//suggest by co pilot - trying to figure out errors 
 
-// document.addEventListener('DOMContentLoaded', () => {
-   // Select the buttons
-   // const showLinksButton = document.querySelector('#show-links-button');
-   // const showAllButton = document.querySelector('#show-all-button');
-   // const channelBlocks = document.querySelector('#channel-blocks');
 
-    // Check if the buttons exist
-    //if (showLinksButton) {
-       // showLinksButton.addEventListener('click', () => {
-           // Logic to show only link blocks
-           // const allBlocks = document.querySelectorAll('#channel-blocks li');
-           // allBlocks.forEach(block => {
-                //if (block.classList.contains('link-block')) {
-                    block.style.display = 'block';
-              //  } else {
-                  //  block.style.display = 'none';
-                }
-            });
-        });
-   // } else {
-      //  console.error('Element with ID "show-links-button" not found');
-    }
+let imgDis = document.getElementById('img-dis');
 
-   // if (showAllButton) {
-       // showAllButton.addEventListener('click', () => {
-            // Logic to show all blocks
-           // const allBlocks = document.querySelectorAll('#channel-blocks li');
-          //  allBlocks.forEach(block => {
-          //      block.style.display = 'block';
-            });
-        });
-   // } else {
-     //   console.error('Element with ID "show-all-button" not found');
-    }
-});
+imgDis.addEventListener('click', (event) => {
+   imgDis.style.display = "none";
+})
