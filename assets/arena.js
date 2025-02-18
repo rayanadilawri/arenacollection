@@ -60,13 +60,12 @@ let renderBlock = (block) => {
                 <dialog>
                 <div>
                  <p> ${block.title}</p>
-                 <p> ${block.description_html}</p>
+                 <p> ${block.description}</p>
                 </div>
                 <div>
                 <img src="${block.image.large.url}">
                 </div>
-                
-                    <button class="close"> x </button>
+                <button class="close"> x </button>
                 </dialog>
             </li>
         `

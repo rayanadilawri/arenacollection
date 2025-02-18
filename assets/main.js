@@ -1,28 +1,41 @@
 // javascript to know about my buttons and my elements 
 let channelBlocks = document.getElementById('channel-blocks');
 let showLinksButton = document.getElementById('show-links-button');
-let showlAllButton = document.querySelector('#show-all-button');
-let showVideoButton = document.querySelector('show-video-button');
-let showImage = document.getElementById('show-image-button');
+let showAllButton = document.getElementById('#show-all-button');
+let showVideoButton = document.getElementById('show-video-button');
+let showImageButton = document.getElementById('show-image-button');
+let showTextButton = document.getElementById('show-text-button');
 
 // add onlick event to my buttons
+
+//links 
 showLinksButton.onclick = () => {
-    console.log("testing")
+channelBlocks.classList.remove('show-links', 'show-video', 'show-image', 'show-text');
 channelBlocks.classList.add('show-links')
 }
 
+//video
 showVideoButton.onclick = () => {
-    channelBlocks.classList.add('show-video')
+    channelBlocks.classList.remove('show-links', 'show-video', 'show-image', 'show-text');
+    channelBlocks.classList.add('show-video');
     }
 
-showlAllButton.onclick = () => {
+//image
+showimageButton.onclick = () => {
+    channelBlocks.classList.remove('show-links', 'show-video', 'show-image', 'show-text');
+     channelBlocks.classList.add('show-image');
+        }
+
+//text 
+ showtextButton.onclick = () => {
+    channelBlocks.classList.remove('show-links', 'show-video', 'show-image');
+    channelBlocks.classList.add('show-text');
+            }
+
+ //all 
+showAllButton.onclick = () => {
     channelBlocks.classList.remove('show-links', 'show-video')
 }
 
 
 
-let imgDis = document.getElementById('img-dis');
-
-imgDis.addEventListener('click', (event) => {
-   imgDis.style.display = "none";
-})

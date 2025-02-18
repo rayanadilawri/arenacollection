@@ -3,10 +3,19 @@
   --spacing: 2em;
   --base-size: 12px;
   --gutter: calc(3 * var(--base-size)); 
-  --color--primary: #000; 
+  --color--primary: black; 
   --color--secondary: rgb(138, 216, 22);
-  --color--background: white;
   --color--tertiary: rgb(60, 4, 4);
+  --color--quartery: white;
+
+  --color--green-1: rgb(3, 199, 101);     /* Dark Mint Green */
+  --color--green-2: rgb(12, 162, 12);      /* Dark Forest Green */
+  --color--green-3: rgb(5, 144, 74);     /* Dark Emerald Green */
+  --color--green-4: rgb(85, 85, 0);      /* Dark Olive Green */
+  --color--green-5: rgb(3, 51, 3);      /* Dark Sea Green */
+  
+  
+
   --title-size: 100px;
   --body-size: 20px;
 }
@@ -17,7 +26,7 @@ body {
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
-  background-color: var(--color--background); /* Added background color */
+  background-color: var(--color--quartery); /* Added background color */
 }
 
 h1 {
@@ -35,12 +44,6 @@ h1 span {
   font-weight: 300;
   font-style: normal;
   font-size: var(--big-size);
-}
-
-button {
-  background-color: var(--color--secondary);
-  color: var(--color--primary);
-  cursor: pointer;
 }
 
 header {
@@ -72,8 +75,9 @@ header {
 #channel-blocks li:hover {
   border-radius: 0%; 
 /* border: 10px solid var(--color--tertiary);  */
-  width: 220px;
-  height: 220px;
+  width: 200px;
+  height: 200px;
+  border: var(--color--green-5) 10px solid;
 }
 /* .clicked-img{
   width: 220px;
@@ -81,10 +85,36 @@ header {
 } */
 
 dialog{
-  width: 200px;
-  height: 200px;
-  background-color: red;
-  z-index: 5000000;
+  width: 1000px;
+  height: 500px;
+  background-color: var(--color--green-5);
+  position:fixed;
+  top: 50%;
+  left: 50%;
+  z-index:10000;
+  transform: translate(-50%, -50%);
+}
+
+dialog  img{
+  max-block-size:400px;
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+}
+
+::backdrop{
+  background-color: var(green);
+  backdrop-filter: blur(10px);
+}
+
+
+body:has(dialog[open]){
+  overflow: hidden;
+}
+
+
+image-block:has(dialog[open]){
+  background-color: var(--green--1);
 }
 
 #channel-blocks li .content {
@@ -127,31 +157,67 @@ a {
 
 
 /* buttons */ 
+
+/*link button*/
 #channel-blocks.show-links .link-block {
   display: block;
 }
 
 #channel-blocks.show-links .video-block,
 #channel-blocks.show-links .image-block,
-#channel-blocks.show-links .audio-block {
+#channel-blocks.show-links .audio-block,
+#channel-blocks.show-links .text-block {
   display: none;
-}
+};
 
+/*video  button*/
 #channel-blocks.show-video .video-block {
   display: block;
 }
 
 #channel-blocks.show-video .link-block,
 #channel-blocks.show-video .image-block,
-#channel-blocks.show-video .audio-block {
+#channel-blocks.show-video .audio-block,
+#channel-blocks.show-video .text-block {
+  display: none;
+};
+
+/*text  button*/
+#channel-blocks.show-text .text-block {
+  display: block;
+}
+
+#channel-blocks.show-text .link-block,
+#channel-blocks.show-text .video-block,
+#channel-blocks.show-text .image-block,
+#channel-blocks.show-text .audio-block {
   display: none;
 }
 
-#channel-blocks .link-block,
-#channel-blocks .video-block,
-#channel-blocks .image-block,
-#channel-blocks .audio-block {
-  display: block;
+
+button {
+  color: var(--color--quartery);
+  cursor: pointer;
+}
+
+#show-links-button {
+  background-color: var(--color--green-1);
+}
+
+#show-video-button {
+  background-color: var(--color--green-2);
+}
+
+#show-image-button {
+  background-color: var(--color--green-3);
+}
+
+#show-audio-button {
+  background-color: var(--color--green-4);
+}
+
+#show-all-button {
+  background-color: var(--color--green-5);
 }
 
 .image-scroll-container {
@@ -173,6 +239,11 @@ dialog [open] {
   inset: var(--spacing);
 }
 
+
+img {
+  max-block-size: 250px;
+  max-inline-size: 250px;
+}
 /* shape inspired by https://codepen.io/huichops/pen/gObbxyw*/
 
 
@@ -190,6 +261,4 @@ dialog [open] {
 /*JS ISSUES*/
 
 /* fix buttons on gallery page - why arent they working */ 
-
-/* why are some <li> classes empty (show in inspect mode) and how do i remove them*/
 /*modal isnt coming up - its showing inside the block - how do i geti t to appear outside the block like the loom example*/
