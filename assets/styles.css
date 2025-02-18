@@ -54,6 +54,7 @@ header {
   gap: 20px;
 }
 
+
 #channel-blocks li {
   width: 110px;
   height: 110px;
@@ -84,8 +85,7 @@ border: 10px solid var(--color--tertiary);
   justify-content: center;
   align-items: center;
   object-fit: cover;
-}
-
+} 
 
 .audio-block audio {
   width: 280px;
@@ -146,6 +146,7 @@ a {
 dialog [open] {
   display: grid; 
   grid-template-columns: repeat(2, minmax(0,1fr));
+  inset: var(--spacing);
 }
 
 /* shape inspired by https://codepen.io/huichops/pen/gObbxyw*/
@@ -166,4 +167,4 @@ next steps:
 /*JS ISSUES*/
 /* fix buttons on gallery page - why arent they working */ 
 /* why are some <li> classes empty (show in inspect mode) and how do i remove them*/
-/*modal isnt coming up - its showing inside the block - how do i geti t to appear outside the block*/
+/*modal isnt coming up - its showing inside the block - how do i geti t to appear outside the block like the loom example*/

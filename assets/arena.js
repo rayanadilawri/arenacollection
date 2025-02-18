@@ -63,7 +63,7 @@ let renderBlock = (block) => {
                  <p> ${block.description_html}</p>
                 </div>
                 <img src="${block.image.large.url}">
-                    <button class="close"> Close</button>
+                    <button class="close"> x </button>
                 </dialog>
             </li>
         `
