@@ -194,6 +194,18 @@ a {
   display: none;
 }
 
+/*image button*/
+#channel-blocks.show-image .image-block {
+  display: block;
+}
+
+#channel-blocks.show-image .video-block,
+#channel-blocks.show-image .links-block,
+#channel-blocks.show-image .audio-block,
+#channel-blocks.show-image .text-block {
+  display: none;
+};
+
 
 button {
   color: var(--color--quartery);

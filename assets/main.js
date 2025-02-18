@@ -10,19 +10,19 @@ let showTextButton = document.getElementById('show-text-button');
 
 //links 
 showLinksButton.onclick = () => {
-channelBlocks.classList.remove('show-links', 'show-video', 'show-image', 'show-text');
+channelBlocks.classList.remove('show-video', 'show-image', 'show-text');
 channelBlocks.classList.add('show-links')
 }
 
 //video
 showVideoButton.onclick = () => {
-    channelBlocks.classList.remove('show-links', 'show-video', 'show-image', 'show-text');
+    channelBlocks.classList.remove('show-links', 'show-image', 'show-text');
     channelBlocks.classList.add('show-video');
     }
 
 //image
 showimageButton.onclick = () => {
-    channelBlocks.classList.remove('show-links', 'show-video', 'show-image', 'show-text');
+    channelBlocks.classList.remove( 'show-video', 'show-audio', 'show-text');
      channelBlocks.classList.add('show-image');
         }
 

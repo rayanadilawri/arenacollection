@@ -36,8 +36,6 @@ let renderBlock = (block) => {
             <li class="link-block">
                 <p><em>Link</em></p>
                 <picture>
-                    <source srcset="${block.image.thumb.url}">
-                    <source srcset="${block.image.large.url}">
                     <img src="${block.image.thumb.url}">
                 </picture>
                 <h3>${block.title}</h3>
@@ -60,7 +58,7 @@ let renderBlock = (block) => {
                 <dialog>
                 <div>
                  <p> ${block.title}</p>
-                 <p> ${block.description}</p>
+                 <p> ${block.description_html}</p>
                 </div>
                 <div>
                 <img src="${block.image.large.url}">
