@@ -148,21 +148,26 @@ let renderUser = (user, container) => { // You can have multiple arguments for a
 };
 
 let initInteraction = () => {
-    let imageBlocks = document.querySelectorAll('.image-block');
+    let imageBlocks = document.querySelectorAll('.image-block')
     imageBlocks.forEach((block) => {
-        let openButton = block.querySelector('button');
-        let dialog = block.querySelector('dialog');
-        let closeButton = dialog.querySelector('button');
+        let openButton = block.querySelector('button')
+        let dialog = block.querySelector('dialog')
+        let closeButton = dialog.querySelector('button')
 
         openButton.onclick = () => {
-            dialog.show();
-        };
+            dialog.show()
+        }
 
         closeButton.onclick = () => {
-            dialog.close();
-        };
-    });
-};
+            dialog.close()
+        }
+        dialog.onclick = (event) => {
+            if (event.target === dialog) {
+                dialog.close()
+            }
+        }
+    })
+}
 
 // Now that we have said what we can do, go get the data:
 fetch(`https://api.are.na/v2/channels/${channelSlug}?per=100`, { cache: 'no-store' })
