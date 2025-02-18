@@ -57,8 +57,12 @@ let renderBlock = (block) => {
                         <img src="${block.image.thumb.url}">
                     </figure>
                 </button>
-                <dialog hidden>
-                    <p> I am a modal overlay!</p>
+                <dialog>
+                <div>
+                 <p> ${block.title}</p>
+                 <p> ${block.description_html}</p>
+                </div>
+                <img src="${block.image.large.url}">
                     <button class="close"> Close</button>
                 </dialog>
             </li>
