@@ -5,7 +5,7 @@
   --gutter: calc(3 * var(--base-size)); 
   --color--primary: black; 
   --color--secondary: rgb(138, 216, 22);
-  --color--tertiary: rgb(60, 4, 4);
+  --color--tertiary: rgb(42, 3, 3);
   --color--quartery: white;
 
   --color--green-1: rgb(3, 199, 101);     /* Dark Mint Green */
@@ -87,7 +87,7 @@ header {
 dialog{
   width: 1000px;
   height: 500px;
-  background-color: var(--color--green-5);
+  background-color: var(--color--quartery);
   position:fixed;
   top: 50%;
   left: 50%;
@@ -102,11 +102,9 @@ dialog  img{
   object-fit: cover;
 }
 
-::backdrop{
-  background-color: var(green);
-  backdrop-filter: blur(10px);
+dialog::backdrop {
+  backdrop-filter: blur(30px);
 }
-
 
 body:has(dialog[open]){
   overflow: hidden;
@@ -266,6 +264,7 @@ img {
 /* add some type of overlay to green blocks*/
 /*make circles float like lily pads*/ 
 /*make dialog box look like work of art and frame */ 
+/* make the backdrop work*//
 
 
 /*JS ISSUES*/
