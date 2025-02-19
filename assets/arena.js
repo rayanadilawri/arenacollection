@@ -156,7 +156,8 @@ let initInteraction = () => {
         let closeButton = dialog.querySelector('button')
 
         openButton.onclick = () => {
-            dialog.show()
+            openButton.style.border = '20px black solid';
+            setTimeout(() => { dialog.showModal() ; }, 1500);
         }
 
         closeButton.onclick = () => {

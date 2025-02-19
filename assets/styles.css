@@ -88,9 +88,11 @@ h1 span {
 
 
 #channel-blocks {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
   gap: 20px;
+  list-style: none;
+  justify-content: center;
 }
 
 
@@ -138,7 +140,7 @@ dialog  img{
   object-fit: cover;
 }
 
-::backdrop {
+dialog::backdrop {
   background-color: rgb(0 0 0 / 75%); 
   backdrop-filter: blur(8px); 
 }
@@ -291,16 +293,13 @@ img {
 
 /*PRIORITY*/
 
-
-/* change all block names on ziwei*/ 
-
 /* CSS ISSUES */ 
+/* make order of images random like pizza example*/ 
+
 /* add new layout style*/ 
-/*make rows of 5 for desktop - rows of 5 for mobile too*/
+/* change all block names on ziwei*/ 
+/* make modal work*/
 /*make MOBILE FIRST*/
-/*make mobile so when image is in screen, it automaticaly has the border over it*/
-/*make circles float like lily pads - codepen*/ 
-/*make some circles have different positions - clustered vibe .... reference pizza example*/
 /* make the backdrop work*/
 
 /*SECONDARY*/
