@@ -92,8 +92,8 @@ h1 span {
 
 
 #channel-blocks li {
-  width: 110px;
-  height: 110px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   margin: 20px;
   position: relative;
@@ -108,8 +108,8 @@ h1 span {
 #channel-blocks li:hover {
   border-radius: 0%; 
 /* border: 10px solid var(--color--tertiary);  */
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   border: var(--color--tertiary) 10px solid;
 }
 /* .clicked-img{
@@ -296,6 +296,7 @@ img {
 /* add new layout style*/ 
 /*make MOBILE FIRST*/
 /*make circles float like lily pads - codepen*/ 
+/*make some circles have different positions - clustered vibe .... reference pizza example*/
 /* make the backdrop work*/
 
 /*SECONDARY*/
