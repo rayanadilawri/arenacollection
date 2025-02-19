@@ -51,12 +51,15 @@ height: 100%;
   background-color: var(--color--blue);
 }
 
+.full {
+  background-image: url(../images/default.jpg); 
+}
+
 body {
   font-size: var(--body-size);
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
-  background-image: url(../images/default.jpg); /* Added background color */
   color: var(--color--primary);
 }
 
@@ -265,7 +268,6 @@ button {
   overflow-x: auto; 
   gap: 50px; 
   padding: 20px;
-  filter: blur(10px);
 }
 
 .image-scroll-container:hover {
@@ -294,7 +296,9 @@ img {
 
 /* CSS ISSUES */ 
 /* add new layout style*/ 
+/*make rows of 5 for desktop - rows of 5 for mobile too*/
 /*make MOBILE FIRST*/
+/*make mobile so when image is in screen, it automaticaly has the border over it*/
 /*make circles float like lily pads - codepen*/ 
 /*make some circles have different positions - clustered vibe .... reference pizza example*/
 /* make the backdrop work*/
