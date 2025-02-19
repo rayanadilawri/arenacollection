@@ -13,25 +13,62 @@
   --color--green-3: rgb(5, 144, 74);     /* Dark Emerald Green */
   --color--green-4: rgb(85, 85, 0);      /* Dark Olive Green */
   --color--green-5: rgb(3, 51, 3);      /* Dark Sea Green */
+  --color--blue: rgb(89, 139, 245);        /* Blue */
   
   
 
   --title-size: 100px;
   --body-size: 20px;
 }
+ 
+/* p{
+  padding-inline: var(--gutter);
+  padding-block: calc(5 * var(--base-size));
+} */
+
+header {
+  display: flex; 
+  justify-content: center; 
+  gap: 40px;
+  background-color: var(--color--green-1);
+  width: 100%;  
+  top: 0;
+}
+
+
+.top {
+  background-color: var(--color--green-3);
+
+}
+
+.middle {
+height: 100%;
+ background-image: url('../images/default.jpg');
+ border: var(--color--tertiary) 10px solid;
+}
+
+.bottom {
+  background-color: var(--color--blue);
+}
 
 body {
   font-size: var(--body-size);
-  background-image: url('../images/default.jpg');
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
-  background-color: var(--color--quartery); /* Added background color */
+  background-image: url(../images/default.jpg); /* Added background color */
+  color: var(--color--primary);
 }
+
+footer {
+  background-color: var(--color--green-3
+  );
+}
+
 
 h1 {
   font-size: var(--title-size);
-  color: var(--color--secondary);
+  color: var(--color--quartery);
   text-align: center;
 }
 
@@ -46,10 +83,6 @@ h1 span {
   font-size: var(--big-size);
 }
 
-header {
-  padding-inline: var(--gutter);
-  padding-block: calc(5 * var(--base-size));
-}
 
 #channel-blocks {
   display: flex;
@@ -64,7 +97,7 @@ header {
   border-radius: 50%;
   margin: 20px;
   position: relative;
-  background-color: var(--color--secondary);
+  background-color: var(--color--green-3);
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -77,7 +110,7 @@ header {
 /* border: 10px solid var(--color--tertiary);  */
   width: 200px;
   height: 200px;
-  border: var(--color--green-5) 10px solid;
+  border: var(--color--tertiary) 10px solid;
 }
 /* .clicked-img{
   width: 220px;
@@ -102,17 +135,17 @@ dialog  img{
   object-fit: cover;
 }
 
-dialog::backdrop {
-  backdrop-filter: blur(30px);
+::backdrop {
+  background-color: rgb(0 0 0 / 75%); 
+  backdrop-filter: blur(8px); 
 }
 
 body:has(dialog[open]){
   overflow: hidden;
 }
 
-
-image-block:has(dialog[open]){
-  background-color: var(--green--1);
+.image-block:has(dialog[open]) figure {
+ filter: blur(1px);
 }
 
 #channel-blocks li .content {
@@ -138,14 +171,6 @@ image-block:has(dialog[open]){
 }
 
 
-header {
-  display: flex; 
-  justify-content: center; 
-  gap: 40px;
-  background-color: var(--color--secondary);
-  width: 100%;  
-  top: 0;
-}
 
 a {
   text-decoration: none; 
@@ -211,7 +236,7 @@ button {
 }
 
 #show-links-button {
-  background-color: var(--color--green-1);
+  background-color: var(--color--green-2);
 }
 
 #show-video-button {
@@ -219,15 +244,19 @@ button {
 }
 
 #show-image-button {
-  background-color: var(--color--green-3);
+  background-color: var(--color--green-2);
 }
 
 #show-audio-button {
-  background-color: var(--color--green-4);
+  background-color: var(--color--green-2);
 }
 
 #show-all-button {
-  background-color: var(--color--green-5);
+  background-color: var(--color--green-2);
+}
+
+#show-text-button {
+  background-color: var(--color--green-2);
 }
 
 .image-scroll-container {
@@ -258,14 +287,23 @@ img {
 
 
 
+/*PRIORITY*/
 
+
+/* change all block names on ziwei*/ 
 
 /* CSS ISSUES */ 
-/* add some type of overlay to green blocks*/
-/*make circles float like lily pads*/ 
-/*make dialog box look like work of art and frame */ 
-/* make the backdrop work*//
+/* add new layout style*/ 
+/*make MOBILE FIRST*/
+/*make circles float like lily pads - codepen*/ 
+/* make the backdrop work*/
 
-
+/*SECONDARY*/
 /*JS ISSUES*/
 /* fix buttons on gallery page - why arent they working */ 
+
+/*LAST*/
+/*more*/ 
+/* add arena images thumbnails and make sure they work */
+/* add read me */
+/* add attributions*/ 
