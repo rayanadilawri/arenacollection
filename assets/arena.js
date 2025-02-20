@@ -205,7 +205,6 @@ let initInteraction = () => {
 
           /* hansu zhu code tutor helped me udnerstand setTimeout */
           openButton.onclick = () => {
-              openButton.style.border = '1px var(--color--tertiary) solid';
               setTimeout(() => { dialog.showModal(); }, 1500);
           }
 
@@ -249,3 +248,26 @@ fetch(`https://api.are.na/v2/channels/${channelSlug}?per=100`, { cache: 'no-stor
         renderUser(data.user, channelUsers);
     });
 
+
+    // not working yet 
+    //worked on with viyan code tutor to try and achieve random positioning effect 
+
+    const mobileX = 30;
+    const mobileY = 30;
+    const desktopX = 55;
+    const desktopY = 55;
+    
+    let blocks = document.querySelectorAll(".channel-blocks");
+    console.log(blocks);
+    
+    for (let i = 0; i < blocks.length; i++) {
+      let block = blocks[i];
+    
+      const xRandMobile = Math.random() * mobileX;
+      const yRandMobile = Math.random() * mobileY;
+      const xRandDesktop = Math.random() * desktopX;
+      const yRandDesktop = Math.random() * desktopY;
+    
+      block.style.setProperty("transform", `translate(${xRandDesktop}%, ${yRandDesktop}%)`);
+    }
+    

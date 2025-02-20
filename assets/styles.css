@@ -1,3 +1,26 @@
+
+.cinzel-  {
+  font-family: "Cinzel", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+.monsieur-la-doulaise-regular {
+  font-family: "Monsieur La Doulaise", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.red-hat-display{
+  font-family: "Red Hat Display", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+
 :root {
   --big-size: 2em;
   --spacing: 2em;
@@ -8,36 +31,48 @@
   --color--tertiary: rgb(42, 3, 3);
   --color--quartery: white;
 
-  --color--green-1: rgb(3, 199, 101);     /* Dark Mint Green */
-  --color--green-2: rgb(12, 162, 12);      /* Dark Forest Green */
-  --color--green-3: rgb(5, 144, 74);     /* Dark Emerald Green */
-  --color--green-4: rgb(85, 85, 0);      /* Dark Olive Green */
-  --color--green-5: rgb(3, 51, 3);      /* Dark Sea Green */
-  --color--blue: rgb(89, 139, 245);        /* Blue */
+  --color--green-1: #6B9A6F;     
+  --color--green-2:#88B888;     
+  
+  --color--blue: rgb(89, 139, 245);       
   
   
 
-  --title-size: 100px;
+  --title-size: 10em;
+  --subheading-size: 30px;
   --body-size: 20px;
 }
  
-/* p{
+ p{
   padding-inline: var(--gutter);
-  padding-block: calc(5 * var(--base-size));
-} */
+  padding-block: calc(2 * var(--base-size));
+} 
 
 header {
   display: flex; 
-  justify-content: center; 
-  gap: 40px;
-  background-color: var(--color--green-1);
+  justify-content: space-evenly;  
+  align-items: center;            
+  background-color: var(--color--green-2);
   width: 100%;  
   top: 0;
 }
 
+nav {
+  display: flex;
+  justify-content: space-evenly;  
+  width: 100%;
+  align-items: center;   
+  height: 3em;        
+
+}
+.nav {                     
+  font-size: 1.2em;      
+  font-family: cinzel;
+ color: var(--color--green-4)
+}
 
 .top {
-  background-color: var(--color--green-3);
+  background-color: var(--color--green-1);
 
 }
 
@@ -64,63 +99,92 @@ body {
 }
 
 footer {
-  background-color: var(--color--green-3
+  background-color: var(--color--green-2
   );
 }
 
 
 h1 {
+ padding-top: 0.3em;
   font-size: var(--title-size);
   color: var(--color--quartery);
   text-align: center;
+  font-family: Monsieur La Doulaise;
 }
 
-h1 span {
-  font-size: var(--big-size);
+h2 {
+  padding: 0.1em;
+  font-size: var(--subheading-size);
+  color: var(--color--quartery);
+  text-align: center;
+  font-family: Red Hat Display;
 }
 
-.oddity-script {
-  font-family: "oddity-script", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-  font-size: var(--big-size);
+p {
+  color: var(--color--green-5);
+  font-family:Red Hat Display;
 }
-
 
 #channel-blocks {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(5, 1fr); 
+  gap: 30px; 
   list-style: none;
   justify-content: center;
-}
+  position: relative;
 
+}
 
 #channel-blocks li {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  margin: 20px;
-  position: relative;
   background-color: var(--color--green-3);
-  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
   transition: all 0.3s ease;
+  animation: floatAnimation 5s ease-in-out infinite;
+  transition: transform 0.3s ease;
+}
+
+#channel-blocks li::after {
+  content: ''; 
+  position: absolute; 
+  width: 100%;
+  height: 100%;
+  background-color: rgba(61, 146, 61, 0.7); 
+  border-radius: 50%; 
+  pointer-events: none;
+
+}
+
+@keyframes floatAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(+30px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+#channel-blocks li:hover::after {
+  display: none; 
 }
 
 #channel-blocks li:hover {
   border-radius: 0%; 
-/* border: 10px solid var(--color--tertiary);  */
   width: 150px;
   height: 150px;
   border: var(--color--tertiary) 10px solid;
+  background-color: #6B9A6F;
 }
-/* .clicked-img{
-  width: 220px;
-  height: 220px;
-} */
+
 
 dialog{
   width: 1000px;
@@ -291,25 +355,17 @@ img {
 
 
 /*TO DO LIST!!!!!!!!!!!!!!!!!!!!*/
-/*PRIORITY*/
-
-/*JS ISSUES*/
-/* fix buttons on gallery page - why arent they working */ 
-
-
-
-/* make order of images random like pizza example ASK VIYAN FOR JS HELP!!!!!!!!!*/
 
 /* CSS ISSUES */ 
-/* add new layout style AND PERFECT THE AESTHETIC*/ 
-/* make modal work FOR ALL BLOCKS*/
+/* add new layout style AND PERFECT THE AESTHETIC (design)*/ 
 /*Fix aesthetic of modal - image, then title and description on right side */
-/* make the backdrop work*/
 /*make MOBILE FIRST WORK*/
-
 
 /*more*/ 
 /* change all block names, captions on ziwei*/ 
 /* add arena images thumbnails and make sure they work */
 /* add read me */
 /* add attributions*/ 
+
+
+/*TUTOR!!!!! - figure out random order with JS OR CSS*/ 

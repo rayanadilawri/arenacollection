@@ -8,7 +8,6 @@ let showTextButton = document.getElementById('show-text-button');
 let showAudioButton = document.getElementById('show-audio-button');
 
 
-
 // add onlick event to my buttons
 
 //links 
@@ -39,6 +38,3 @@ showTextButton.onclick = () => {
 showAllButton.onclick = () => {
     channelBlocks.classList.remove('show-links', 'show-video', 'show-image', 'show-text');
 }
-
-
-
