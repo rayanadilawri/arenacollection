@@ -34,15 +34,22 @@ let renderBlock = (block) => {
     if (block.class == 'Link') {
         let linkItem = `
             <li class="link-block">
-                <p><em>Link</em></p>
-                <picture>
+              <button> 
+              <figure>
                     <img src="${block.image.thumb.url}">
-                </picture>
-                <h3>${block.title}</h3>
-                ${block.description_html}
+              </figure>
+              </button>
+              <dialog>
+              <div>
+                   <p>${block.title}</p>
+               <p> ${block.description_html} </p>
                 <p><a href="${block.source.url}">See the original ↗</a></p>
+                <img src="${block.image.large.url}">
+                </div>
+                <button class="close"> x </button>
+                </dialog>
             </li>
-        `;
+        `
         channelBlocks.insertAdjacentHTML('beforeend', linkItem);
     }
 
@@ -74,10 +81,21 @@ let renderBlock = (block) => {
     // Text!
     else if (block.class == 'Text') {
         let linkItem = `
-            <li class="text-block"> ${block.content_html}
-                <p> Quote from Arena</p>
+            <li class="text-block"> 
+            <button>
+            <figure>
+            <p> ${block.content_html}</p>
+            </figure>
+            </button>
+            <dialog>
+            <div>
+            <p> ${block.title}</p>
+            <p> ${block.content_html}</p>
+            </div>
+            <button class="close"> x </button>
+            </dialog>
             </li>
-        `;
+        `
         channelBlocks.insertAdjacentHTML('beforeend', linkItem);
     }
 
@@ -89,9 +107,21 @@ let renderBlock = (block) => {
         if (attachment.includes('video')) {
             let videoItem = `
                 <li class="video-block">
+                <button>
+                    <figure>  
+                    <img id="img-dis" src="${block.image.large.url}">
+                    </figure>
+                    </button>
+                    <dialog>
+                    <div>
+                    <p> ${block.title}</p>
+                    <p> ${block.description_html}</p>
                     <video controls src="${block.attachment.url}"></video>
+                    </div>
+                    <button class=c"close"> x </button>
+                    </dialog>
                 </li>
-            `;
+            `
             channelBlocks.insertAdjacentHTML('beforeend', videoItem);
         }
 
@@ -121,8 +151,21 @@ let renderBlock = (block) => {
             // …still up to you, but here’s an example `iframe` element:
             let linkedVideoItem = `
                 <li class="video-block" id="video">
-                    <p><em>Linked Video</em></p>
+                <button>
+                    <figure>
+                    <img id="img-dis" src="${block.image.large.url}">
+                        <p><em>Linked Video</em></p>
+                    </figure>
+                    </button>
+                    <dialog>
+                    <div>
+                    <p> ${block.title}</p>
+                    <p> ${block.description_html}</p>
                     ${block.embed.html}
+                    <iframe src="${block.embed.url}"></iframe>
+                    </div>
+                    <button class="close"> x </button>
+                    </dialog>  
                 </li>
             `;
             channelBlocks.insertAdjacentHTML('beforeend', linkedVideoItem);
@@ -149,27 +192,41 @@ let renderUser = (user, container) => { // You can have multiple arguments for a
 };
 
 let initInteraction = () => {
-    let imageBlocks = document.querySelectorAll('.image-block')
-    imageBlocks.forEach((block) => {
-        let openButton = block.querySelector('button')
-        let dialog = block.querySelector('dialog')
-        let closeButton = dialog.querySelector('button')
+  let imageBlocks = document.querySelectorAll('.image-block');
+  let linkBlocks = document.querySelectorAll('.link-block');
+  let textBlocks = document.querySelectorAll('.text-block');
+  let videoBlocks = document.querySelectorAll('.video-block');
+  
+  let setupBlockInteraction = (blocks) => {
+      blocks.forEach((block) => {
+          let openButton = block.querySelector('button');
+          let dialog = block.querySelector('dialog');
+          let closeButton = dialog.querySelector('.close');
 
-        openButton.onclick = () => {
-            openButton.style.border = '20px black solid';
-            setTimeout(() => { dialog.showModal() ; }, 1500);
-        }
+          /* hansu zhu code tutor helped me udnerstand setTimeout */
+          openButton.onclick = () => {
+              openButton.style.border = '1px var(--color--tertiary) solid';
+              setTimeout(() => { dialog.showModal(); }, 1500);
+          }
 
-        closeButton.onclick = () => {
-            dialog.close()
-        }
-        dialog.onclick = (event) => {
-            if (event.target === dialog) {
-                dialog.close()
-            }
-        }
-    })
+          closeButton.onclick = () => {
+              dialog.close();
+          }
+          
+          dialog.onclick = (event) => {
+              if (event.target === dialog) {
+                  dialog.close();
+              }
+          }
+      });
+  }
+  
+  setupBlockInteraction(imageBlocks);
+  setupBlockInteraction(linkBlocks);
+  setupBlockInteraction(textBlocks);
+  setupBlockInteraction(videoBlocks);
 }
+
 
 // Now that we have said what we can do, go get the data:
 fetch(`https://api.are.na/v2/channels/${channelSlug}?per=100`, { cache: 'no-store' })
