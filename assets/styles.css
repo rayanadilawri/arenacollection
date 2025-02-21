@@ -62,15 +62,28 @@ header {
   top: 0;
 }
 
+
 nav {
   display: flex;
-  justify-content: space-evenly;  
+  flex-direction: column;  
+  justify-content: center;
+  align-items: center;    
   width: 100%;
-  align-items: center;   
-  height: 3em;                            
-  font-size: 1.2em;      
+  height: auto;          
+  font-size: 1.0em;
   font-family: cinzel;
- color: var(--color--green-4)
+  color: var(--color--green-4);
+}
+
+.nav::after {
+  background-image: url('../images/leaf.jpg');
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  opacity: 0.1;
 }
 
 /* .button {
@@ -88,6 +101,7 @@ nav {
   background-color: var(--color--green-1); 
   cursor: url(../images/leafcursor.png);
 }
+
 
 .middle {
 height: 100%;
@@ -171,11 +185,11 @@ p {
   position: absolute; 
   width: 100%;
   height: 100%;
-  background-color: rgba(61, 146, 61, 0.7); 
+  background-color: rgba(10, 119, 52, 0.7); 
   border-radius: 48%; 
   pointer-events: none;
-
 }
+
 
 @keyframes floatAnimation {
   0% {
@@ -215,10 +229,12 @@ dialog{
 }
 
 dialog  img{
-  width: 200px;
-  height: 200px;
+  max-width: 500px;
+  max-height: 380px;
   max-width: 60%;
   object-fit: contain;
+  object-position: left;
+  padding: 1em;
   }
 
 dialog::backdrop {
@@ -233,6 +249,7 @@ body:has(dialog[open]){
 .image-block:has(dialog[open]) figure {
  filter: blur(1px);
 }
+
 
 
 #channel-blocks li .content {
@@ -333,9 +350,14 @@ button {
   font-size: 1.2em;
   cursor: pointer;
   font-family: cinzel;
+  text-align: center;
+  margin-left: 15px;
 }
 
-
+.filter-line {
+display: flex;
+justify-content: center;
+}
 
 .image-scroll-container {
   display: flex; 
@@ -360,8 +382,36 @@ img {
   max-block-size: 250px;
   max-inline-size: 250px;
 }
-/* shape inspired by https://codepen.io/huichops/pen/gObbxyw*/
 
+@media only screen and (min-width:800px) {
+
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;  
+    width: 100%;
+    align-items: center;   
+    height: 3em;                            
+    font-size: 1.0em;      
+    font-family: cinzel;
+   color: var(--color--green-4)
+  }
+  
+  .nav::after
+  {
+    background-image: url('../images/leaf.jpg');
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    opacity: 0.1;
+  }
+  
+  }
+  
 
 /*TO DO LIST!!!!!!!!!!!!!!!!!!!!*/
 
