@@ -45,8 +45,13 @@
  
  p{
   padding-inline: var(--gutter);
-  padding-block: calc(2 * var(--base-size));
+  padding-block: calc(3 * var(--base-size));
 } 
+
+.monet-cred {
+  padding: 3em;
+  font-style: italic;
+}
 
 header {
   display: flex; 
@@ -62,18 +67,26 @@ nav {
   justify-content: space-evenly;  
   width: 100%;
   align-items: center;   
-  height: 3em;        
-
-}
-.nav {                     
+  height: 3em;                            
   font-size: 1.2em;      
   font-family: cinzel;
  color: var(--color--green-4)
 }
 
-.top {
-  background-color: var(--color--green-1);
+/* .button {
+  background-color: var(--color--green-2);
+  padding: 20px;
+  border-radius: 50%;
+  width: 80px;  
+  height: 80px; 
+  align-items: center;
+  text-align: center;
+} */
 
+.top {
+  position: relative;
+  background-color: var(--color--green-1); 
+  cursor: url(../images/leafcursor.png);
 }
 
 .middle {
@@ -123,6 +136,7 @@ h2 {
 p {
   color: var(--color--green-5);
   font-family:Red Hat Display;
+
 }
 
 .count {
@@ -141,7 +155,7 @@ p {
 #channel-blocks li {
   width: 150px;
   height: 150px;
-  border-radius: 50%;
+  border-radius: 48%;
   background-color: var(--color--green-3);
   display: flex;
   justify-content: center;
@@ -158,7 +172,7 @@ p {
   width: 100%;
   height: 100%;
   background-color: rgba(61, 146, 61, 0.7); 
-  border-radius: 50%; 
+  border-radius: 48%; 
   pointer-events: none;
 
 }
@@ -201,11 +215,11 @@ dialog{
 }
 
 dialog  img{
-  max-block-size:400px;
-  width: 400px;
-  height: 400px;
-  object-fit: cover;
-}
+  width: 200px;
+  height: 200px;
+  max-width: 60%;
+  object-fit: contain;
+  }
 
 dialog::backdrop {
   background-color: rgb(0 0 0 / 75%); 
@@ -219,6 +233,7 @@ body:has(dialog[open]){
 .image-block:has(dialog[open]) figure {
  filter: blur(1px);
 }
+
 
 #channel-blocks li .content {
   width: 100%;
@@ -304,16 +319,20 @@ a {
 
 button {
   color: var(--color--quartery);
-  cursor: pointer;
 }
+
+
 
 #show-links-button, #show-video-button, #show-text-button, #show-image-button, #show-all-button {
   background-color: var(--color--green-2);
   padding: 20px;
-  border-radius: 50%;
-  width: 80px;  
-  height: 80px; 
+  border-radius: 46%; 
+  width: 120px;  
+  height: 120px; 
   align-items: center;
+  font-size: 1.2em;
+  cursor: pointer;
+  font-family: cinzel;
 }
 
 
@@ -346,9 +365,13 @@ img {
 
 /*TO DO LIST!!!!!!!!!!!!!!!!!!!!*/
 
+/*fix modal*/ 
+/*Fix aesthetic of modal - image, then title and description on right side */
+
+/*fix cursor*/ 
+
 /* CSS ISSUES */ 
 /* add new layout style AND PERFECT THE AESTHETIC (design)*/ 
-/*Fix aesthetic of modal - image, then title and description on right side */
 /*make MOBILE FIRST WORK*/
 
 
