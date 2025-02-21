@@ -1,5 +1,5 @@
 
-.cinzel-  {
+.cinzel  {
   font-family: "Cinzel", serif;
   font-optical-sizing: auto;
   font-weight: <weight>;
@@ -36,16 +36,18 @@
   
   --color--blue: rgb(89, 139, 245);       
   
-  
 
-  --title-size: 10em;
-  --subheading-size: 30px;
-  --body-size: 20px;
+  --title-size: 4.2em;
+  --subheading-size: 25px;
+  --body-size: 18px;
+
+  --spacing-size: 20px;
+  --spacing-size-body:30px;
 }
  
  p{
   padding-inline: var(--gutter);
-  padding-block: calc(3 * var(--base-size));
+  padding-block: calc(var(--base-size));
 } 
 
 .monet-cred {
@@ -72,7 +74,7 @@ nav {
   height: auto;          
   font-size: 1.0em;
   font-family: cinzel;
-  color: var(--color--green-4);
+  color: black;
 }
 
 .nav::after {
@@ -84,6 +86,7 @@ nav {
   width: 100%;
   height: 50%;
   opacity: 0.1;
+  font-family: cinzel;
 }
 
 /* .button {
@@ -99,7 +102,7 @@ nav {
 .top {
   position: relative;
   background-color: var(--color--green-1); 
-  cursor: url(../images/leafcursor.png);
+  padding: var(--spacing-size);
 }
 
 
@@ -107,6 +110,9 @@ nav {
 height: 100%;
  background-image: url('../images/default.jpg');
  border: var(--color--tertiary) 10px solid;
+ background-repeat: no-repeat;
+ background-position: center;
+ background-size: cover;
 }
 
 .bottom {
@@ -123,6 +129,7 @@ body {
   background-size: cover;
   background-position: center;
   color: var(--color--primary);
+  overflow-x: hidden;
 }
 
 footer {
@@ -132,7 +139,7 @@ footer {
 
 
 h1 {
- padding-top: 0.3em;
+ padding-top: var(--spacing-size);
   font-size: var(--title-size);
   color: var(--color--quartery);
   text-align: center;
@@ -140,18 +147,21 @@ h1 {
 }
 
 h2 {
-  padding: 0.1em;
+  padding-left: var(--spacing-size-body);
+  padding-right: var(--spacing-size-body);
   font-size: var(--subheading-size);
   color: var(--color--quartery);
   text-align: center;
   font-family: Red Hat Display;
+
 }
 
 p {
   color: var(--color--green-5);
   font-family:Red Hat Display;
-
+  font-size: 1.0em;
 }
+
 
 .count {
   text-align: center;
@@ -407,9 +417,14 @@ img {
     left: 0;
     width: 100%;
     height: 20%;
-    opacity: 0.1;
+    opacity: 0.2;
   }
+
   
+  :root {
+  --title-size: 9em;
+  --subheading-size: 35px;
+  --spacing-size:20px;
   }
   
 
