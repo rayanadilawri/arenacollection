@@ -125,6 +125,9 @@ p {
   font-family:Red Hat Display;
 }
 
+.count {
+  text-align: center;
+}
 #channel-blocks {
   display: grid;
   grid-template-columns: repeat(5, 1fr); 
@@ -304,29 +307,16 @@ button {
   cursor: pointer;
 }
 
-#show-links-button {
+#show-links-button, #show-video-button, #show-text-button, #show-image-button, #show-all-button {
   background-color: var(--color--green-2);
+  padding: 20px;
+  border-radius: 50%;
+  width: 80px;  
+  height: 80px; 
+  align-items: center;
 }
 
-#show-video-button {
-  background-color: var(--color--green-2);
-}
 
-#show-image-button {
-  background-color: var(--color--green-2);
-}
-
-#show-audio-button {
-  background-color: var(--color--green-2);
-}
-
-#show-all-button {
-  background-color: var(--color--green-2);
-}
-
-#show-text-button {
-  background-color: var(--color--green-2);
-}
 
 .image-scroll-container {
   display: flex; 
@@ -361,11 +351,13 @@ img {
 /*Fix aesthetic of modal - image, then title and description on right side */
 /*make MOBILE FIRST WORK*/
 
+
 /*more*/ 
 /* change all block names, captions on ziwei*/ 
 /* add arena images thumbnails and make sure they work */
 /* add read me */
 /* add attributions*/ 
+/*add lilypad on button when hovering*/
 
 
 /*TUTOR!!!!! - figure out random order with JS OR CSS*/ 
