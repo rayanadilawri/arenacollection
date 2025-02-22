@@ -177,8 +177,8 @@ p {
 }
 
 #channel-blocks li {
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   border-radius: 48%;
   background-color: var(--color--green-3);
   display: flex;
@@ -220,8 +220,8 @@ p {
 
 #channel-blocks li:hover {
   border-radius: 0%; 
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   border: var(--color--tertiary) 10px solid;
   background-color: #6B9A6F;
 }
@@ -442,6 +442,16 @@ img {
     flex-direction: row;
     justify-content: center;
     }
+
+    #channel-blocks li {
+      width: 150px;
+      height: 150px; }
+
+
+      #channel-blocks li:hover {
+        border-radius: 0%; 
+        width: 150px;
+        height: 150px;
 
 }
 
