@@ -168,7 +168,7 @@ p {
 }
 #channel-blocks {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); 
+  grid-template-columns: repeat(2, 1fr); 
   gap: 30px; 
   list-style: none;
   justify-content: center;
@@ -366,6 +366,7 @@ button {
 
 .filter-line {
 display: flex;
+flex-direction: column;
 justify-content: center;
 }
 
@@ -420,6 +421,15 @@ img {
     opacity: 0.2;
   }
 
+  #channel-blocks {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); 
+    gap: 30px; 
+    list-style: none;
+    justify-content: center;
+    position: relative;
+  
+  }
   
   :root {
   --title-size: 9em;
@@ -427,6 +437,13 @@ img {
   --spacing-size:20px;
   }
   
+  .filter-line {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    }
+
+}
 
 /*TO DO LIST!!!!!!!!!!!!!!!!!!!!*/
 
