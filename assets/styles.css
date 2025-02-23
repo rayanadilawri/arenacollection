@@ -23,7 +23,7 @@
 
 :root {
   --big-size: 2em;
-  --spacing: 2em;
+  --spacing: 1.5em;
   --base-size: 12px;
   --gutter: calc(3 * var(--base-size)); 
   --color--primary: black; 
@@ -32,7 +32,9 @@
   --color--quartery: white;
 
   --color--green-1: #6B9A6F;     
-  --color--green-2:#88B888;     
+  --color--green-2:#88B888;    
+  --color--green-3: #237623;
+  --color--green-4: #042604;
   
   --color--blue: rgb(89, 139, 245);       
   
@@ -43,17 +45,23 @@
 
   --spacing-size: 20px;
   --spacing-size-body:30px;
+  --nav-size: 1.5em;
 }
  
  p{
-  padding-inline: var(--gutter);
+  padding-inline: var(--spacing);
   padding-block: calc(var(--base-size));
 } 
 
 .monet-cred {
   padding: 3em;
   font-style: italic;
+  bottom: 0;
+  right: 0;
+  text-align: right; 
+  position: absolute;
 }
+
 
 header {
   display: flex; 
@@ -65,28 +73,21 @@ header {
 }
 
 
-nav {
+.nav-text {
   display: flex;
   flex-direction: column;  
   justify-content: center;
   align-items: center;    
-  width: 100%;
-  height: auto;          
-  font-size: 1.0em;
-  font-family: cinzel;
-  color: black;
 }
 
-.nav::after {
-  background-image: url('../images/leaf.jpg');
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 50%;
-  opacity: 0.1;
+.nav-text {
+  color : var(--color--green-3);
+  font-size: var(--nav-size);
   font-family: cinzel;
+}
+
+.nav-text a:hover {
+  color: var(--color--green-4);
 }
 
 /* .button {
@@ -113,6 +114,7 @@ height: 100%;
  background-repeat: no-repeat;
  background-position: center;
  background-size: cover;
+ position: relative;
 }
 
 .bottom {
@@ -132,10 +134,6 @@ body {
   overflow-x: hidden;
 }
 
-footer {
-  background-color: var(--color--green-2
-  );
-}
 
 
 h1 {
@@ -285,11 +283,10 @@ body:has(dialog[open]){
 }
 
 
-
-a {
-  text-decoration: none; 
-  color: black; 
-  font-size: 1.2em;
+.nav-text {
+  color : var(--color--green-3);
+  font-size: var(--nav-size);
+  font-family: cinzel;
 }
 
 
@@ -344,31 +341,22 @@ a {
 };
 
 
-button {
-  color: var(--color--quartery);
-}
-
 
 
 #show-links-button, #show-video-button, #show-text-button, #show-image-button, #show-all-button {
-  background-color: var(--color--green-2);
-  padding: 20px;
-  border-radius: 46%; 
-  width: 120px;  
-  height: 120px; 
-  align-items: center;
-  font-size: 1.2em;
-  cursor: pointer;
-  font-family: cinzel;
-  text-align: center;
-  margin-left: 15px;
+  font-family: "Red Hat Display";
+  padding-left: var(--spacing);
 }
 
 .filter-line {
-display: flex;
-flex-direction: column;
-justify-content: center;
-}
+  display: flex;               
+  width: 100%;  
+  height: auto;             
+  padding: var(--spacing);  
+  background-image: url('../images/leaf.jpg');  
+  color: var(--color--quartery);   
+  }
+
 
 .image-scroll-container {
   display: flex; 
@@ -402,24 +390,30 @@ img {
     flex-direction: row;
     justify-content: space-evenly;  
     width: 100%;
+    height: var(--spacing); 
     align-items: center;   
     height: 3em;                            
     font-size: 1.0em;      
-    font-family: cinzel;
+    font-family: "Red Hat Display";
    color: var(--color--green-4)
   }
   
-  .nav::after
-  {
-    background-image: url('../images/leaf.jpg');
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 20%;
-    opacity: 0.2;
+
+
+  .filter-line {
+      display: flex;                     
+      justify-content: space-between;   
+      width: 100%;                                          
+      padding: var(--spacing);          
+      background-image: url('../images/leaf.jpg');  
+      color: var(--color--quartery)
   }
+
+  #show-all-button,  #show-text-button, #show-video-button, #show-image-button, #show-links-button {
+    padding: var(--spacing);
+  }
+  
+
 
   #channel-blocks {
     display: grid;
@@ -453,6 +447,15 @@ img {
         width: 150px;
         height: 150px;
 
+      }
+        footer {
+          background-color: var(--color--green-2 );
+          display: flex;
+          padding: var(--spacing);
+          justify-content: space-between;
+        }
+
+        
 }
 
 /*TO DO LIST!!!!!!!!!!!!!!!!!!!!*/
