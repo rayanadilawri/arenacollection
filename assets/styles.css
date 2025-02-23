@@ -353,7 +353,7 @@ body:has(dialog[open]){
   width: 100%;  
   height: auto;             
   padding: var(--spacing);  
-  background-image: url('../images/leaf.jpg');  
+  background-color: var(--color--green-2); 
   color: var(--color--quartery);   
   }
 
@@ -405,7 +405,7 @@ img {
       justify-content: space-between;   
       width: 100%;                                          
       padding: var(--spacing);          
-      background-image: url('../images/leaf.jpg');  
+      background-color: var(--color--green-2);
       color: var(--color--quartery)
   }
 
