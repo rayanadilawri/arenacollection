@@ -385,6 +385,12 @@ img {
   max-inline-size: 250px;
 }
 
+footer {
+  background-color: var(--color--green-2 );
+  display: flex;
+  padding: var(--spacing);
+  justify-content: space-between;
+}
 @media only screen and (min-width:800px) {
 
 
@@ -451,34 +457,25 @@ img {
         height: 150px;
 
       }
-        footer {
-          background-color: var(--color--green-2 );
-          display: flex;
-          padding: var(--spacing);
-          justify-content: space-between;
-        }
+        
 
         
 }
 
 /*TO DO LIST!!!!!!!!!!!!!!!!!!!!*/
 
-/*fix modal*/ 
-/*Fix aesthetic of modal - image, then title and description on right side */
+/*TUTOR!!!!! - figure out random order with JS OR CSS*/ 
 
-/*fix cursor*/ 
-
-/* CSS ISSUES */ 
-/* add new layout style AND PERFECT THE AESTHETIC (design)*/ 
-/*make MOBILE FIRST WORK*/
-
-
-/*more*/ 
-/* change all block names, captions on ziwei*/ 
+/* 1. change all block names, captions on ziwei*/ 
 /* add arena images thumbnails and make sure they work */
-/* add read me */
+
+
+/*2. Fix aesthetic of modal - image, then title and description on right side */
+
+/*3. make MOBILE FIRST WORK*/
+
+/* 4. add read me */
 /* add attributions*/ 
 /*add lilypad on button when hovering*/
 
 
-/*TUTOR!!!!! - figure out random order with JS OR CSS*/ 
