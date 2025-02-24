@@ -36,7 +36,10 @@
   --color--green-3: #237623;
   --color--green-4: #042604;
   
-  --color--blue: rgb(89, 139, 245);       
+  --color--blue: rgb(69, 121, 232);
+  --color--blue-light: rgb(159, 185, 240);
+  
+  ;       
   
 
   --title-size: 4.2em;
@@ -353,7 +356,7 @@ body:has(dialog[open]){
   width: 100%;  
   height: auto;             
   padding: var(--spacing);  
-  background-color: var(--color--green-2); 
+  background-color: var(--color--blue-light); 
   color: var(--color--quartery);   
   }
 
@@ -405,7 +408,7 @@ img {
       justify-content: space-between;   
       width: 100%;                                          
       padding: var(--spacing);          
-      background-color: var(--color--green-2);
+      background-color: var(--color--blue-light);
       color: var(--color--quartery)
   }
 
