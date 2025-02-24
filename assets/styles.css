@@ -44,6 +44,7 @@
 
   --title-size: 4.2em;
   --subheading-size: 25px;
+  --subheading-size2: 20px;
   --body-size: 18px;
 
   --spacing-size: 20px;
@@ -91,6 +92,7 @@ header {
 
 .nav-text a:hover {
   color: var(--color--green-4);
+  text-shadow:2px 1px 1px rgb(6, 65, 30);
 }
 
 /* .button {
@@ -102,6 +104,11 @@ header {
   align-items: center;
   text-align: center;
 } */
+
+#index-button {
+  color: black;
+  background-color: aliceblue;
+}
 
 .top {
   position: relative;
@@ -157,6 +164,15 @@ h2 {
 
 }
 
+h3 {
+  padding: var(--spacing-size-body);
+  font-size: var(--subheading-size2);
+  color: var(--color--quartery);
+  text-align: center;
+  font-family: Red Hat Display;
+
+}
+
 p {
   color: var(--color--green-5);
   font-family:Red Hat Display;
@@ -170,17 +186,26 @@ p {
 #channel-blocks {
   display: grid;
   grid-template-columns: repeat(2, 1fr); 
-  gap: 30px; 
-  list-style: none;
+  gap: 20px; 
   justify-content: center;
   position: relative;
-
 }
+
+/* #channel-blocks {
+  .channel-blocks:nth-child(1) { transform: translate(15%, 5%); }
+  .channel-blocks:nth-child(2) { transform: translate(-5%, -10%); }
+  .channel-blocks:nth-child(3) { transform: translate(5%, -5%); }
+  .channel-blocks:nth-child(4) { transform: translate(-10%, 0%); }
+  .channel-blocks:nth-child(5) { transform: translate(12%, -2%); }
+  .channel-blocks:nth-child(6) { transform: translate(-10%, 6%); }
+ } */
+
+
 
 #channel-blocks li {
   width: 100px;
   height: 100px;
-  border-radius: 48%;
+  border-radius: 50%;
   background-color: var(--color--green-3);
   display: flex;
   justify-content: center;
@@ -197,7 +222,7 @@ p {
   width: 100%;
   height: 100%;
   background-color: rgba(10, 119, 52, 0.7); 
-  border-radius: 48%; 
+  border-radius: 50%; 
   pointer-events: none;
 }
 
@@ -305,7 +330,7 @@ body:has(dialog[open]){
 #channel-blocks.show-links .audio-block,
 #channel-blocks.show-links .text-block {
   display: none;
-};
+}
 
 /*video  button*/
 #channel-blocks.show-video .video-block {
@@ -317,7 +342,7 @@ body:has(dialog[open]){
 #channel-blocks.show-video .audio-block,
 #channel-blocks.show-video .text-block {
   display: none;
-};
+}
 
 /*text  button*/
 #channel-blocks.show-text .text-block {
@@ -341,15 +366,23 @@ body:has(dialog[open]){
 #channel-blocks.show-image .audio-block,
 #channel-blocks.show-image .text-block {
   display: none;
-};
-
-
-
+}
 
 #show-links-button, #show-video-button, #show-text-button, #show-image-button, #show-all-button {
-  font-family: "Red Hat Display";
+  font-family: cinzel;
   padding-left: var(--spacing);
+  font-size: 20px;
 }
+
+#show-links-button:hover, #show-video-button:hover, #show-text-button:hover, #show-image-button:hover, #show-all-button:hover {
+  font-family: cinzel;
+  padding-left: var(--spacing);
+  color: var(--color--blue);
+  font-size: 20px;
+  cursor: pointer;
+  text-shadow:2px 1px 1px rgb(122, 151, 226);
+}
+
 
 .filter-line {
   display: flex;               
@@ -448,14 +481,15 @@ footer {
 
     #channel-blocks li {
       width: 150px;
-      height: 150px; }
+      height: 150px; 
+      border-radius: 50%;
+    }
 
 
       #channel-blocks li:hover {
         border-radius: 0%; 
         width: 150px;
         height: 150px;
-
       }
         
 

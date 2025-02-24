@@ -38,3 +38,22 @@ showTextButton.onclick = () => {
 showAllButton.onclick = () => {
     channelBlocks.classList.remove('show-links', 'show-video', 'show-image', 'show-text');
 }
+
+// //random order **need to figure this out 
+
+// const mobileX = 35; 
+// const mobileY = 35;
+// const desktopX = 60; 
+// const desktopY = 60;
+
+// let blocks = document.querySelectorAll(".channel-blocks");
+// console.log(blocks);
+
+// blocks.forEach((block) => {
+//     const xRandDesktop = Math.random() * desktopX;
+//     const yRandDesktop = Math.random() * desktopY;
+
+//     block.style.setProperty("transform", `translate(${xRandDesktop}%, ${yRandDesktop}%)`);
+// });
+
+
