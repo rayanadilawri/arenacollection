@@ -1,5 +1,7 @@
 // javascript to know about my buttons and my elements 
 let channelBlocks = document.getElementById('channel-blocks');
+console.log(channelBlocks);
+
 let showLinksButton = document.getElementById('show-links-button');
 let showAllButton = document.getElementById('show-all-button');
 let showVideoButton = document.getElementById('show-video-button');
@@ -39,21 +41,7 @@ showAllButton.onclick = () => {
     channelBlocks.classList.remove('show-links', 'show-video', 'show-image', 'show-text');
 }
 
-// //random order **need to figure this out 
 
-// const mobileX = 35; 
-// const mobileY = 35;
-// const desktopX = 60; 
-// const desktopY = 60;
-
-// let blocks = document.querySelectorAll(".channel-blocks");
-// console.log(blocks);
-
-// blocks.forEach((block) => {
-//     const xRandDesktop = Math.random() * desktopX;
-//     const yRandDesktop = Math.random() * desktopY;
-
-//     block.style.setProperty("transform", `translate(${xRandDesktop}%, ${yRandDesktop}%)`);
-// });
-
+    // not working yet 
+    //worked on with viyan code tutor to try and achieve random positioning effect 
 

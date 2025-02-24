@@ -148,27 +148,27 @@ let renderBlock = (block) => {
 
         // Linked video!
         if (embed.includes('video')) {
-            // …still up to you, but here’s an example `iframe` element:
-            let linkedVideoItem = `
-                <li class="video-block" id="video">
-                <button>
-                    <figure>
-                    <img id="img-dis" src="${block.image.large.url}">
-                        <p><em>Linked Video</em></p>
-                    </figure>
-                    </button>
-                    <dialog>
-                    <div>
-                    <p> ${block.title}</p>
-                    <p> ${block.description_html}</p>
-                    ${block.embed.html}
-                    <iframe src="${block.embed.url}"></iframe>
-                    </div>
-                    <button class="close"> x </button>
-                    </dialog>  
-                </li>
-            `;
-            channelBlocks.insertAdjacentHTML('beforeend', linkedVideoItem);
+        //     // …still up to you, but here’s an example `iframe` element:
+        //     let linkedVideoItem = `
+        //         <li class="video-block">
+        //         <button>
+        //             <figure>
+        //             <img id="img-dis" src="${block.image.large.url}">
+        //                 <p><em>Linked Video</em></p>
+        //             </figure>
+        //             </button>
+        //             <dialog>
+        //             <div>
+        //             <p> ${block.title}</p>
+        //             <p> ${block.description_html}</p>
+        //             ${block.embed.html}
+        //             <iframe src="${block.embed.url}"></iframe>
+        //             </div>
+        //             <button class="close"> x </button>
+        //             </dialog>  
+        //         </li>
+        //     `;
+        //     channelBlocks.insertAdjacentHTML('beforeend', linkedVideoItem);
             // More on iframe: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe
         }
 
@@ -177,7 +177,9 @@ let renderBlock = (block) => {
             // …up to you!
         }
     }
+   
 };
+
 
 // It‘s always good to credit your work:
 let renderUser = (user, container) => { // You can have multiple arguments for a function!
@@ -224,6 +226,7 @@ let initInteraction = () => {
   setupBlockInteraction(linkBlocks);
   setupBlockInteraction(textBlocks);
   setupBlockInteraction(videoBlocks);
+
 }
 
 
@@ -239,35 +242,32 @@ fetch(`https://api.are.na/v2/channels/${channelSlug}?per=100`, { cache: 'no-stor
             // console.log(block) // The data for a single block
             renderBlock(block); // Pass the single block data to the render function
         });
-
+        let blocks = document.querySelectorAll("#channel-blocks li");
+        console.log("channel-blocks", blocks);
+        const mobileX = 30;
+        const mobileY = 30;
+        const desktopX = 55;
+        const desktopY = 55;
+        
+        for (let i = 0; i < blocks.length; i++) {
+          let block = blocks[i];
+        console.log(block);
+          const xRandMobile = Math.random() * mobileX;
+          const yRandMobile = Math.random() * mobileY;
+          const xRandDesktop = Math.random() * desktopX;
+          const yRandDesktop = Math.random() * desktopY;
+        
+          block.style.setProperty("transform", `translate(${xRandDesktop}%, ${yRandDesktop}%)`);
+        }
+        
         initInteraction();
-
+        
         // Also display the owner and collaborators:
         let channelUsers = document.querySelector('#channel-users'); // Show them together
         data.collaborators.forEach((collaborator) => renderUser(collaborator, channelUsers));
         renderUser(data.user, channelUsers);
+
+     
     });
 
-
-    // not working yet 
-    //worked on with viyan code tutor to try and achieve random positioning effect 
-
-    const mobileX = 30;
-    const mobileY = 30;
-    const desktopX = 55;
-    const desktopY = 55;
-    
-    let blocks = document.querySelectorAll(".channel-blocks");
-    console.log(blocks);
-    
-    for (let i = 0; i < blocks.length; i++) {
-      let block = blocks[i];
-    
-      const xRandMobile = Math.random() * mobileX;
-      const yRandMobile = Math.random() * mobileY;
-      const xRandDesktop = Math.random() * desktopX;
-      const yRandDesktop = Math.random() * desktopY;
-    
-      block.style.setProperty("transform", `translate(${xRandDesktop}%, ${yRandDesktop}%)`);
-    }
-    
+   

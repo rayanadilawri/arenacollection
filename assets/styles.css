@@ -129,6 +129,7 @@ height: 100%;
 
 .bottom {
   background-color: var(--color--blue);
+  padding-bottom: 6em;
 }
 
 .full {
@@ -183,22 +184,14 @@ p {
 .count {
   text-align: center;
 }
-#channel-blocks {
+ #channel-blocks {
   display: grid;
   grid-template-columns: repeat(2, 1fr); 
   gap: 20px; 
   justify-content: center;
   position: relative;
-}
+} 
 
-/* #channel-blocks {
-  .channel-blocks:nth-child(1) { transform: translate(15%, 5%); }
-  .channel-blocks:nth-child(2) { transform: translate(-5%, -10%); }
-  .channel-blocks:nth-child(3) { transform: translate(5%, -5%); }
-  .channel-blocks:nth-child(4) { transform: translate(-10%, 0%); }
-  .channel-blocks:nth-child(5) { transform: translate(12%, -2%); }
-  .channel-blocks:nth-child(6) { transform: translate(-10%, 6%); }
- } */
 
 
 
@@ -213,7 +206,7 @@ p {
   overflow: hidden;
   transition: all 0.3s ease;
   animation: floatAnimation 5s ease-in-out infinite;
-  transition: transform 0.3s ease;
+  /* transition: transform 0.3s ease; */
 }
 
 #channel-blocks li::after {
@@ -227,7 +220,7 @@ p {
 }
 
 
-@keyframes floatAnimation {
+/* @keyframes floatAnimation {
   0% {
     transform: translateY(0);
   }
@@ -237,7 +230,7 @@ p {
   100% {
     transform: translateY(0);
   }
-}
+} */
 
 
 #channel-blocks li:hover::after {
@@ -455,11 +448,9 @@ footer {
     padding: var(--spacing);
   }
   
-
-
   #channel-blocks {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr); 
+   display: grid;
+    grid-template-columns: repeat(5, 1fr);  
     gap: 30px; 
     list-style: none;
     justify-content: center;
