@@ -553,6 +553,10 @@ nav {
     justify-content: center;
     position: relative;
   
+.text-block {
+  font-size: 16px;
+}
+
   }
   dialog{
     width: 1000px;
@@ -604,14 +608,24 @@ nav {
   dialog p{
     position: relative;
     left: 50%;
-    width: 45%;
+    width: 40%;
     margin-top: 5%;
     font-size: 16px;
     padding: 0px;
   
   }
-  
-  
+
+.text-pop-up-title {
+  left: 50%;
+  width: 40%;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: left; 
+  margin-bottom: 10px; 
+}
+
+
+
 
   :root {
   --title-size: 9em;
