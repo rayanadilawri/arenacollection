@@ -211,7 +211,7 @@ let initInteraction = () => {
 
           /* hansu zhu code tutor helped me udnerstand setTimeout */
           openButton.onclick = () => {
-              setTimeout(() => { dialog.showModal(); }, 1500);
+              setTimeout(() => { dialog.showModal(); }, 1000);
           }
 
           closeButton.onclick = () => {
