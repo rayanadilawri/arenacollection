@@ -245,8 +245,8 @@ p {
 
 
 dialog{
-  width: 1000px;
-  height: 500px;
+  width: 200px;
+  height: 400px;
   background-color: var(--color--quartery);
   position:fixed;
   top: 50%;
@@ -463,6 +463,11 @@ nav {
   
   }
   
+  dialog{
+    width: 1000px;
+    height: 500px;
+  }
+
   :root {
   --title-size: 9em;
   --subheading-size: 35px;
@@ -499,6 +504,7 @@ nav {
 /* add arena images thumbnails and make sure they work */
 
 /*2. Fix aesthetic of modal - image, then title and description on right side */
+/*fix text size in description for mobile  */ 
 
 /*3. make MOBILE FIRST WORK*/
 
