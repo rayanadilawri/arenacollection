@@ -75,6 +75,7 @@ header {
   background-color: var(--color--green-2);
   width: 100%;  
   top: 0;
+  font-family: cinzel;
 }
 
 
@@ -82,10 +83,11 @@ header {
   display: flex;
   flex-direction: column;  
   justify-content: center;
-  align-items: center;    
+  align-items: center;   
+  font-family: cinzel; 
 }
 
-.nav-text {
+.nav-text a{
   color : var(--color--green-3);
   font-size: var(--nav-size);
   font-family: cinzel;
@@ -94,6 +96,7 @@ header {
 .nav-text a:hover {
   color: var(--color--green-4);
   text-shadow:2px 1px 1px rgb(6, 65, 30);
+  font-family: cinzel;
 }
 
 /* .button {
@@ -293,7 +296,6 @@ dialog p{
 dialog::backdrop {
   background-color: rgba(230, 221, 221, 0.75); 
   backdrop-filter: blur(10px); 
-  background-image: url('../images/water.gif');
 }
 
 body:has(dialog[open]){
@@ -485,8 +487,6 @@ dialog p{
 
 dialog::backdrop {
   background-color: rgba(235, 225, 225, 0.75); 
-  opacity: 12%;
-  background-image: url('../images/water.gif');
   backdrop-filter: blur(20px); 
 }
 
@@ -517,6 +517,9 @@ nav {
 }
 @media only screen and (min-width:800px) {
 
+  header {
+    font-family: cinzel;
+  }
 
   nav {
     display: flex;
@@ -527,10 +530,12 @@ nav {
     align-items: center;   
     height: 3em;                            
     font-size: 1.0em;      
-    font-family: "Red Hat Display";
-   color: var(--color--green-4)
+   color: var(--color--green-4);
   }
   
+  p.nav-text {
+    font-family: cinzel;
+  }
 
   .description-text 
   {text-align: center;
@@ -616,8 +621,7 @@ nav {
     position: relative;
     left: 50%;
     width: 40%;
-    margin-top: 5%;
-    font-size: 16px;
+    font-size: 14px;
     padding: 0px;
     color: var(--color--green-4);
   
