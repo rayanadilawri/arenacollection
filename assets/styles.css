@@ -247,7 +247,7 @@ p, a{
 }
 
 dialog{
-  width: 800px;
+  width: 500px;
   height: auto;
   background-color: var(--color--quartery);
   position:fixed;
@@ -559,7 +559,7 @@ nav {
 
   }
   dialog{
-    width: 1000px;
+    width: 900px;
     height: 500px;
     background-color: var(--color--quartery);
     position:fixed;
@@ -612,6 +612,7 @@ nav {
     margin-top: 5%;
     font-size: 16px;
     padding: 0px;
+    color: var(--color--green-4);
   
   }
 
@@ -622,10 +623,19 @@ nav {
   font-weight: bold;
   text-align: left; 
   margin-bottom: 10px; 
+  color: var(--color--green-3);
 }
 
 
-
+.dialog-title {
+  left: 50%;
+  width: 40%;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: left; 
+  margin-bottom: 10px; 
+  color: var(--color--green-3)
+}
 
   :root {
   --title-size: 9em;

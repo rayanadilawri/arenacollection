@@ -92,11 +92,9 @@ let renderBlock = (block) => {
             </button>
             <dialog>
             <div>
-            <p class="text-pop-up-title">
-                        ${block.title}
-                        ${block.content_html}
-                        ${block.description_html}
-            </p>
+            <p class="text-pop-up-title"> ${block.title} </p> 
+            <p> ${block.content_html} </p>
+            <p> ${block.description_html} </p>
             </div>
             <button class="close"> x </button>
             </dialog>
