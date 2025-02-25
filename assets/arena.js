@@ -244,10 +244,10 @@ fetch(`https://api.are.na/v2/channels/${channelSlug}?per=100`, { cache: 'no-stor
         });
         let blocks = document.querySelectorAll("#channel-blocks li");
         console.log("channel-blocks", blocks);
-        const mobileX = 30;
-        const mobileY = 30;
-        const desktopX = 55;
-        const desktopY = 55;
+        const mobileX = 20;
+        const mobileY = 20;
+        const desktopX = 75;
+        const desktopY = 75;
         
         for (let i = 0; i < blocks.length; i++) {
           let block = blocks[i];

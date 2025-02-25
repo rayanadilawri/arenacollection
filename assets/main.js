@@ -40,8 +40,3 @@ showTextButton.onclick = () => {
 showAllButton.onclick = () => {
     channelBlocks.classList.remove('show-links', 'show-video', 'show-image', 'show-text');
 }
-
-
-    // not working yet 
-    //worked on with viyan code tutor to try and achieve random positioning effect 
-

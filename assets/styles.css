@@ -68,7 +68,7 @@
 
 
 header {
-  display: flex; 
+  /* display: flex;  */
   justify-content: space-evenly;  
   align-items: center;            
   background-color: var(--color--green-2);
@@ -193,18 +193,16 @@ p {
 } 
 
 
-
-
 #channel-blocks li {
-  width: 100px;
-  height: 100px;
+  width: 95px;
+  height: 95px;
   border-radius: 50%;
   background-color: var(--color--green-3);
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  transition: all 0.3s ease;
+  /* transition: all 0.3s ease; */
   animation: floatAnimation 5s ease-in-out infinite;
   /* transition: transform 0.3s ease; */
 }
@@ -212,11 +210,11 @@ p {
 #channel-blocks li::after {
   content: ''; 
   position: absolute; 
-  width: 100%;
-  height: 100%;
-  background-color: rgba(10, 119, 52, 0.7); 
+  background-color: rgba(10, 119, 59, 0.7); 
   border-radius: 50%; 
   pointer-events: none;
+  width: 100%;
+  height: 100%;
 }
 
 
@@ -239,8 +237,8 @@ p {
 
 #channel-blocks li:hover {
   border-radius: 0%; 
-  width: 100px;
-  height: 100px;
+  width: 95px;
+  height: 95px;
   border: var(--color--tertiary) 10px solid;
   background-color: #6B9A6F;
 }
@@ -364,12 +362,12 @@ body:has(dialog[open]){
 #show-links-button, #show-video-button, #show-text-button, #show-image-button, #show-all-button {
   font-family: cinzel;
   padding-left: var(--spacing);
+  padding: 5px;
   font-size: 20px;
 }
 
 #show-links-button:hover, #show-video-button:hover, #show-text-button:hover, #show-image-button:hover, #show-all-button:hover {
   font-family: cinzel;
-  padding-left: var(--spacing);
   color: var(--color--blue);
   font-size: 20px;
   cursor: pointer;
@@ -378,7 +376,9 @@ body:has(dialog[open]){
 
 
 .filter-line {
-  display: flex;               
+  display: flex;   
+  flex-direction: column;  
+  text-align: center;          
   width: 100%;  
   height: auto;             
   padding: var(--spacing);  
@@ -416,6 +416,11 @@ footer {
   display: flex;
   padding: var(--spacing);
   justify-content: space-between;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
 }
 @media only screen and (min-width:800px) {
 
@@ -489,11 +494,9 @@ footer {
 
 /*TO DO LIST!!!!!!!!!!!!!!!!!!!!*/
 
-/*TUTOR!!!!! - figure out random order with JS OR CSS*/ 
 
 /* 1. change all block names, captions on ziwei*/ 
 /* add arena images thumbnails and make sure they work */
-
 
 /*2. Fix aesthetic of modal - image, then title and description on right side */
 
