@@ -485,9 +485,9 @@ dialog p{
 
 dialog::backdrop {
   background-color: rgba(235, 225, 225, 0.75); 
-  opacity: 10%;
+  opacity: 12%;
   background-image: url('../images/water.gif');
-  backdrop-filter: blur(10px); 
+  backdrop-filter: blur(20px); 
 }
 
 body:has(dialog[open]){
@@ -678,13 +678,10 @@ nav {
 /* 1. fix block captions and titles*/ 
 /* add arena images thumbnails and make sure they work */
 
-/*2. Fix aesthetic of modal - image, then title and description on right side */
-/*fix text size in description for mobile  */ 
+/*2. Fix aesthetic of modal for mobile- image ontop then title and description on bottom */
 
-/*3. make MOBILE FIRST WORK*/
-
-/* 4. add read me */
+/* 3. add read me */
 /* add attributions*/ 
-/*add lilypad on button when hovering*/
+
 
 

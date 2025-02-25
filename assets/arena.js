@@ -43,7 +43,7 @@ let renderBlock = (block) => {
               <div>
                 <p class="dialog-title">${block.title}</p>
                <p class="dialog-description"> ${block.description_html} 
-               <div class="external-link"><a href="${block.source.url}">See the original ↗</a></div>
+               <div class="external-link"><a href="${block.source.url}">See the original link ↗ </a></div>
                </p>
                 </div>
                 <div class="dialog-image-div">
