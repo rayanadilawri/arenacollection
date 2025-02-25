@@ -41,10 +41,13 @@ let renderBlock = (block) => {
               </button>
               <dialog>
               <div>
-                   <p>${block.title}</p>
-               <p> ${block.description_html} </p>
-                <p><a href="${block.source.url}">See the original ↗</a></p>
-                <img src="${block.image.large.url}">
+                <p class="dialog-title">${block.title}</p>
+               <p class="dialog-description"> ${block.description_html} 
+               <div class="external-link"><a href="${block.source.url}">See the original ↗</a></div>
+               </p>
+                </div>
+                <div class="dialog-image-div">
+                <img class="image-pop-up" src="${block.image.large.url}">
                 </div>
                 <button class="close"> x </button>
                 </dialog>
@@ -64,11 +67,11 @@ let renderBlock = (block) => {
                 </button>
                 <dialog>
                 <div>
-                 <p> ${block.title}</p>
-                 <p> ${block.description_html}</p>
+                 <p class="dialog-title"> ${block.title}</p>
+                 <p class="dialog-description"> ${block.description_html}</p>
                 </div>
-                <div>
-                <img src="${block.image.large.url}">
+                <div class="dialog-image-div">
+                <img class="image-pop-up"src="${block.image.large.url}">
                 </div>
                 <button class="close"> x </button>
                 </dialog>

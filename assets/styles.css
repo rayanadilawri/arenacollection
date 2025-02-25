@@ -174,7 +174,7 @@ h3 {
 
 }
 
-p {
+p, a{
   color: var(--color--green-5);
   font-family:Red Hat Display;
   font-size: 1.0em;
@@ -243,7 +243,6 @@ p {
   background-color: #6B9A6F;
 }
 
-
 dialog{
   width: 200px;
   height: 400px;
@@ -254,15 +253,44 @@ dialog{
   z-index:10000;
   transform: translate(-50%, -50%);
 }
+.dialog-image-div{
+  padding: 1em;
+  object-fit: contain;
+  object-position: left;
+}
 
 dialog  img{
   max-width: 500px;
   max-height: 380px;
-  max-width: 60%;
-  object-fit: contain;
-  object-position: left;
-  padding: 1em;
-  }
+  max-width: 40%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  top: -320px;
+  margin-left: 3%;
+} 
+.close{
+  z-index:50000000;
+  position: fixed;
+  text-align: right;
+  top: 0px;
+  right: 0;
+  padding: 5px;
+  font-size: 40px;
+}
+.external-link{
+  position: relative;
+  left: 62.5%;
+  width: 40%;
+  margin-top: 5%;
+}
+dialog p{
+  position: relative;
+  left: 60%;
+  width: 40%;
+  margin-top: 5%;
+
+}
 
 dialog::backdrop {
   background-color: rgb(0 0 0 / 75%); 
