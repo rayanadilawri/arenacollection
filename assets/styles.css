@@ -116,6 +116,9 @@ header {
   padding: var(--spacing-size);
 }
 
+.description-text 
+{text-align: center;
+padding: 0.5em;}
 
 .middle {
 height: 100%;
@@ -530,6 +533,11 @@ nav {
   }
   
 
+  .description-text 
+  {text-align: center;
+  padding-left: 5em;
+  padding-right: 5em;
+}
 
   .filter-line {
       display: flex;                     
