@@ -553,10 +553,54 @@ nav {
     position: relative;
   
   }
-  
   dialog{
     width: 1000px;
     height: 500px;
+    background-color: var(--color--quartery);
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    z-index:10000;
+    transform: translate(-50%, -50%);
+  }
+  .dialog-image-div{
+    padding: 1em;
+    object-fit: contain;
+    object-position: left;
+  }
+  
+  dialog  img{
+    max-width: 500px;
+    max-height: 380px;
+    max-width: 40%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    top: -320px;
+    margin-left: 3%;
+  } 
+  .close{
+    z-index:50000000;
+    position: fixed;
+    text-align: right;
+    top: 0px;
+    right: 0;
+    padding: 5px;
+    font-size: 40px;
+  }
+  .external-link{
+    position: relative;
+    left: 62.5%;
+    width: 40%;
+    margin-top: 5%;
+  }
+  
+  dialog p{
+    position: relative;
+    left: 60%;
+    width: 40%;
+    margin-top: 5%;
+  
   }
   
   
