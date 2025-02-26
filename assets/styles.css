@@ -137,6 +137,9 @@ height: 100%;
 .bottom {
   background-color: var(--color--blue);
   padding-bottom: 6em;
+  padding-left: 4em;
+  padding-right: 4em;
+}
 }
 
 .full {
@@ -412,7 +415,7 @@ body:has(dialog[open]){
   height: auto;             
   padding: var(--spacing);  
   background-color: var(--color--blue-light); 
-  color: var(--color--quartery);   
+  color: var(--color--quartery);  
   }
 
 
@@ -549,7 +552,8 @@ nav {
       width: 100%;                                          
       padding: var(--spacing);          
       background-color: var(--color--blue-light);
-      color: var(--color--quartery)
+      color: var(--color--quartery);
+      
   }
 
   #show-all-button,  #show-text-button, #show-video-button, #show-image-button, #show-links-button {
@@ -673,8 +677,17 @@ nav {
         height: 150px;
       }
          
+      .bottom {
+        margin-left: 4em;
+        margin-right: 4em;
+      }
         
+body {
+  background-color: var(--color--blue);
 }
+
+}
+
 
 /*TO DO LIST!!!!!!!!!!!!!!!!!!!!*/
 
