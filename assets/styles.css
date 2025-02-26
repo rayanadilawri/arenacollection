@@ -1,3 +1,6 @@
+body {
+  cursor: url('../images/cursor.png'), auto;
+}
 
 .cinzel  {
   font-family: "Cinzel", serif;
@@ -239,7 +242,7 @@ p, a{
   position: absolute; 
   background-color: rgba(10, 119, 59, 0.8); 
   border-radius: 50%; 
-  pointer-events: cursor;
+  cursor: url('../images/cursor.png'), auto;
   width: 100%;
   height: 100%;
 } 
@@ -268,6 +271,7 @@ p, a{
   height: 95px;
   border: var(--color--tertiary) 10px solid;
   background-color: #6B9A6F;
+  cursor: pointer
 }
 
 dialog{
@@ -280,6 +284,7 @@ dialog{
   z-index:10000;
   transform: translate(-50%, -50%);
   padding: 10px;
+  cursor: pointer;
 }
 
 .dialog-title {
@@ -431,7 +436,7 @@ body:has(dialog[open]){
   font-family: cinzel;
   color: var(--color-dark-blue);
   font-size: 20px;
-  cursor: pointer;
+  cursor: url('../images/cursor.png'), auto;
   text-shadow:2px 1px 1px rgb(43, 71, 141);
 }
 
@@ -624,6 +629,7 @@ nav {
     z-index:10000;
     transform: translate(-50%, -50%);
     border: 1px solid var(--color--tertiary);
+    cursor: pointer;
   }
 
   .dialog-image-div{
@@ -715,6 +721,7 @@ display: none;
         border-radius: 0%; 
         width: 150px;
         height: 150px;
+        cursor: url('../images/cursor.png'), auto;
       }
          
       .bottom {
