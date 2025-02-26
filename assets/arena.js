@@ -43,7 +43,7 @@ let renderBlock = (block) => {
               <div>
                 <p class="dialog-title">${block.title}</p>
                <p class="dialog-description"> ${block.description_html} 
-               <p class="external-link"><a href="${block.source.url}">See the original link ↗ </a></p>
+               <div class="external-link"><a href="${block.source.url}">See the original ↗</a></div>
                </p>
                 </div>
                 <div class="dialog-image-div">
@@ -211,7 +211,7 @@ let initInteraction = () => {
 
           /* hansu zhu code tutor helped me udnerstand setTimeout */
           openButton.onclick = () => {
-              setTimeout(() => { dialog.showModal(); }, 1000);
+              setTimeout(() => { dialog.showModal(); }, 1500);
           }
 
           closeButton.onclick = () => {
