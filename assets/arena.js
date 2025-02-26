@@ -121,7 +121,7 @@ let renderBlock = (block) => {
                     <p> ${block.description_html}</p>
                     <video controls src="${block.attachment.url}"></video>
                     </div>
-                    <button class=c"close"> x </button>
+                    <button class="close"> x </button>
                     </dialog>
                 </li>
             `
@@ -130,6 +130,24 @@ let renderBlock = (block) => {
 
         // Uploaded PDFs!
         // else if (attachment.includes('pdf')) {
+        //     let pdfItem = `
+        //         <li class="pdf-block">
+        //             <button>
+        //             <figure>
+        //             <img id="img-dis" src="${block.image.large.url}">
+        //             </figure>
+        //             </button>
+        //             <dialog>
+        //             <div>
+        //             <p> ${block.title}</p>
+        //             <p> ${block.description_html}</p>
+        //             <iframe src="${block.attachment.url}"></iframe>
+        //             </div>
+        //             <button class="close"> x </button>
+        //             </dialog>
+        //         </li>
+        //     `
+        //     channelBlocks.insertAdjacentHTML('beforeend', pdfItem);
 
         // }
 

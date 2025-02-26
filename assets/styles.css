@@ -232,15 +232,15 @@ p, a{
   animation: floatAnimation 5s ease-in-out infinite;
 }
 
-#channel-blocks li::after {
+ #channel-blocks li::after {
   content: ''; 
   position: absolute; 
-  background-color: rgba(10, 119, 59, 0.7); 
+  background-color: rgba(10, 119, 59, 0.8); 
   border-radius: 50%; 
   pointer-events: cursor;
   width: 100%;
   height: 100%;
-}
+} 
 
 
 /* @keyframes floatAnimation {
@@ -375,7 +375,8 @@ body:has(dialog[open]){
 #channel-blocks.show-links .video-block,
 #channel-blocks.show-links .image-block,
 #channel-blocks.show-links .audio-block,
-#channel-blocks.show-links .text-block {
+#channel-blocks.show-links .text-block 
+#channel-blocks.show-links .pdf-block {
   display: none;
 }
 
@@ -730,9 +731,6 @@ body {
 
 /* 1. fix block captions and titles*/ 
 /* add arena images thumbnails and make sure they work */
-
-/*2. Fix aesthetic of modal for mobile- image ontop then title and description on bottom */
-
 /* 3. add read me */
 /* add attributions*/ 
 
