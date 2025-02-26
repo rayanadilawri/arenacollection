@@ -280,6 +280,12 @@ dialog{
   padding: 10px;
 }
 
+.dialog-title {
+  font-weight: bold;
+  text-align: left;  
+  color: var(--color--green-3)
+}
+
 .dialog-image-div {
  display: none;
 }
