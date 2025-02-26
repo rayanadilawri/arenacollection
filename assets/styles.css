@@ -58,6 +58,9 @@ body {
  
 /*https://codepen.io/MarioDesigns/pen/woJgeo*
 /* https://stackoverflow.com/questions/70631090/keyframe-animation-is-not-working-on-the-right-margin-but-works-perfect-on-the-l*/
+/* originally tried to do @keyframes floatanimation with transform and translate, but it was messing up the javascript function i built to randomize the blocks 
+the first link taught me about how you make an element animate, which was helpful, but since It was conflciting with my javascript, I took it out. I then decided to look for other ways to implement the animation without transform and ttranslate and i found this second link. it taught me that you can use margin-top to create an animation by giving it different poitns from 0-100 to rotate through. this was applicible for my design as i wanted to emulate 
+the shape and movement of a lilypad, and sicne I could not use transform / translate, margin-top was the best option to make my animatio nand my randomizer work*/ 
 
 @keyframes floatAnimation {
   0% {
@@ -759,12 +762,4 @@ display: none;
     }
 
     }
-
-
-/*TO DO LIST!!!!!!!!!!!!!!!!!!!!*/
-
-
-/* add attributions*/ 
-
-
 

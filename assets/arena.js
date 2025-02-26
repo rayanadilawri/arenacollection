@@ -226,7 +226,11 @@ let initInteraction = () => {
           let dialog = block.querySelector('dialog');
           let closeButton = dialog.querySelector('.close');
 
-          /* hansi zhu code tutor helped me udnerstand setTimeout */
+          // hansi zhu code tutor helped me understand setTimeout and implement it into my function //
+          // this function works by specifying the delay in miliseconds for the action you want to happen//
+          // this relates to my project because in desktop, i had a frame come up over the lilypad (chanel block) when you hover, to represent that the nature another form of art. //
+          //this was hard to emulate on mobile, as there is no hover, just on click. this function has helped me because it has allowed mobile to have the same effect that I wanted desktop to have//
+          //now, when you click the button on mobile, the frame will come up and after 1 second, the dialog will appear, so in this way the viewer can see the frame and not miss out on this intentional design choice //
           openButton.onclick = () => {
               setTimeout(() => { dialog.showModal(); }, 1000);
           }
@@ -263,6 +267,13 @@ fetch(`https://api.are.na/v2/channels/${channelSlug}?per=100`, { cache: 'no-stor
             // console.log(block) // The data for a single block
             renderBlock(block); // Pass the single block data to the render function
         });
+
+        // I worked with Viyan Poonamalle over 3 coding tutor sessions to build this function//
+        //this functio we worked on helped adress the feedback i got in class to make my design look and feel more organic, and less arena like // 
+       // the function nworks by selecting all the channel blocks in the li then will select a random number betweeen 0 and what i provided to place it // 
+        //learning about how to build This function was valuable to me because it helped me  randomize the position of all the channel blocks on the page each time you reload the page. The blocks are in a grid but each time they are loaded, they are able to move vertically and horizontally within the range i specified (0 and 20-mobile) and (0 and 75- desktop)//
+      
+
         let blocks = document.querySelectorAll("#channel-blocks li");
         console.log("channel-blocks", blocks);
         const mobileX = 20;
