@@ -226,9 +226,9 @@ let initInteraction = () => {
           let dialog = block.querySelector('dialog');
           let closeButton = dialog.querySelector('.close');
 
-          /* hansu zhu code tutor helped me udnerstand setTimeout */
+          /* hansi zhu code tutor helped me udnerstand setTimeout */
           openButton.onclick = () => {
-              setTimeout(() => { dialog.showModal(); }, 1500);
+              setTimeout(() => { dialog.showModal(); }, 1000);
           }
 
           closeButton.onclick = () => {

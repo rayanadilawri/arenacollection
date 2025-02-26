@@ -510,7 +510,7 @@ dialog p{
   position: relative;
   text-align: left;
   width: 80%;
-  font-size: 20px;
+  font-size: 16px;
   color: var(--color--green-4);
 
 }
@@ -729,19 +729,16 @@ display: none;
         margin-right: 4em;
       }
         
-body {
-  background-color: var(--color--blue);
-}
+    body {
+     background-color: var(--color--blue);
+    }
 
-}
+    }
 
 
 /*TO DO LIST!!!!!!!!!!!!!!!!!!!!*/
 
 
-/* 1. fix block captions and titles*/ 
-/* add arena images thumbnails and make sure they work */
-/* 3. add read me */
 /* add attributions*/ 
 
 
