@@ -53,6 +53,21 @@
   --nav-size: 1.5em;
 }
  
+/*https://codepen.io/MarioDesigns/pen/woJgeo*
+/* https://stackoverflow.com/questions/70631090/keyframe-animation-is-not-working-on-the-right-margin-but-works-perfect-on-the-l*/
+
+@keyframes floatAnimation {
+  0% {
+    margin-top: 0px;
+  }
+  50% {
+    margin-top: 15px;
+  }
+  100% {
+    margin-top: 0px;
+  }
+}
+
  p{
   padding-inline: var(--spacing);
   padding-block: calc(var(--base-size));
@@ -194,6 +209,7 @@ p, a{
 .count {
   text-align: center;
   color:white;
+  font-family: cinzel;
 }
  #channel-blocks {
   display: grid;
