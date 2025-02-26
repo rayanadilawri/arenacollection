@@ -74,12 +74,14 @@
 } 
 
 .monet-cred {
-  padding: 3em;
+  padding: 1em;
   font-style: italic;
   bottom: 0;
   right: 0;
   text-align: right; 
   position: absolute;
+  font-weight: bold;
+  font-family:  Red Hat Display;
 }
 
 
@@ -140,7 +142,7 @@ header {
 padding: 0.5em;}
 
 .middle {
-height: 100%;
+height: 30%;
  background-image: url('../images/default.jpg');
  border: var(--color--tertiary) 10px solid;
  background-repeat: no-repeat;
@@ -296,15 +298,17 @@ dialog  img{
   margin: auto;
   display: block;
 } 
+
 .close{
   z-index:50000000;
   position: fixed;
   text-align: right;
   top: 0px;
   right: 0;
-  padding: 5px;
-  font-size: 20px;
+  padding-right: 10px;
+  font-size: 10px;
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
 }
 
 .external-link{
@@ -489,15 +493,7 @@ dialog  img{
   top: -320px;
   margin-left: 3%;
 } 
-.close{
-  z-index:50000000;
-  position: fixed;
-  text-align: right;
-  top: 0px;
-  right: 0;
-  padding: 5px;
-  font-size: 40px;
-}
+
 /* .external-link{
   position: relative;
   left: 62.5%;
@@ -584,6 +580,9 @@ nav {
   padding-right: 5em;
 }
 
+.middle {
+  height: 80%;}
+
   .filter-line {
       display: flex;                     
       justify-content: space-between;   
@@ -592,6 +591,10 @@ nav {
       background-color: var(--color--blue-light);
       color: var(--color--quartery);
       
+  }
+
+  .monet-cred {
+    padding: 3em;
   }
 
   #show-all-button,  #show-text-button, #show-video-button, #show-image-button, #show-links-button {
