@@ -1,3 +1,7 @@
+//followed erics loom to create this
+// this was helpful for my design because I was able to organize my blocks by filters to create an interactive experience for the viewr 
+//the function works by declaring the names of the buttons and getting the element by id then adding or removing the show-tags for each specific button 
+
 // javascript to know about my buttons and my elements 
 let channelBlocks = document.getElementById('channel-blocks');
 console.log(channelBlocks);

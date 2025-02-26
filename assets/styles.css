@@ -271,7 +271,7 @@ p, a{
   height: 100%;
 } 
 
-
+/*this was the original animation i tried*/ 
 /* @keyframes floatAnimation {
   0% {
     transform: translateY(0);
