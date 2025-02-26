@@ -71,6 +71,12 @@ body {
   }
 }
 
+.arrow {
+  font-size: 70px ;
+  padding: 1em;
+  color: var(--color--green-4);
+}
+
  p{
   padding-inline: var(--spacing);
   padding-block: calc(var(--base-size));
@@ -154,6 +160,20 @@ height: 30%;
  position: relative;
 }
 
+.quote {
+  height: 12%;
+  background-color: var(--color--green-1);
+}
+
+.quote p {
+font-family: cinzel;
+font-size: 1.1em;
+color: var(--color--green-4);
+text-align: center;
+justify-content: center;
+
+}
+
 .bottom {
   background-color: var(--color--blue);
   padding-bottom: 10em;
@@ -173,6 +193,7 @@ body {
   background-position: center;
   color: var(--color--primary);
   overflow-x: hidden;
+  height: 100%;
 }
 
 
@@ -557,6 +578,10 @@ nav {
     100% {
       margin-top: 0px;
     }
+  }
+
+  .quote p {
+    font-size: 1.6em;
   }
 
   header {
