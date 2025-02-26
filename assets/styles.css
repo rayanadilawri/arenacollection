@@ -53,7 +53,7 @@ body {
 
   --spacing-size: 20px;
   --spacing-size-body:30px;
-  --nav-size: 1.5em;
+  --nav-size: 1.2em;
 }
  
 /*https://codepen.io/MarioDesigns/pen/woJgeo*
@@ -599,7 +599,7 @@ nav {
     height: var(--spacing); 
     align-items: center;   
     height: 3em;                            
-    font-size: 1.0em;      
+    font-size: var(--nav-size);      
    color: var(--color--green-4);
   }
   
