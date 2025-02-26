@@ -70,8 +70,7 @@ let renderBlock = (block) => {
                  <p class="dialog-title"> ${block.title}</p>
                  <p class="dialog-description"> ${block.description_html}</p>
                 </div>
-                <div class="dialog-image-div">
-                <img class="image-pop-up"src="${block.image.large.url}">
+                <div class="external-link"><a href="${block.image.large.url}">See the original ↗</a></div>
                 </div>
                 <button class="close"> x </button>
                 </dialog>
