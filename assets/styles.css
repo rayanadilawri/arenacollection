@@ -70,6 +70,30 @@ the shape and movement of a lilypad, and sicne I could not use transform / trans
   100% {
     margin-top: 0px;
   }
+} 
+
+@keyframes floatAnimation1 {
+  0% {
+    margin-top: 0px;
+  }
+  50% {
+    margin-top: 6px;
+  }
+  100% {
+    margin-top: 0px;
+  }
+}
+
+@keyframes floatAnimation2 {
+  0% {
+    margin-top: 0px;
+  }
+  25% {
+    margin-top: 1px;
+  }
+  75% {
+    margin-top: 0px;
+  }
 }
 
 .arrow {
@@ -256,8 +280,23 @@ p, a{
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  animation: floatAnimation 5s ease-in-out infinite;
+  /* animation: floatAnimation 5s ease-in-out infinite; */
 }
+
+ #channel-blocks li:nth-child(4n) {
+  animation: floatAnimation 5s ease-in-out infinite;
+} 
+
+#channel-blocks li:nth-child(3n) {
+  animation: floatAnimation1 6s ease-in-out infinite;
+}
+
+#channel-blocks li:nth-child(7n) {
+  animation: floatAnimation2 4s ease-in-out infinite;
+}
+
+
+
 
  #channel-blocks li::after {
   content: ''; 
@@ -316,12 +355,15 @@ dialog{
 }
 
 .dialog-image-div {
- display: none;
+ display: block;
+  padding: 1em;
+  object-fit: contain;
+  object-position: left;
 }
 
-dialog  img{
-  max-height: 100%;
-  max-width: 100%;
+dialog img{
+  /* max-height: 100%;
+  max-width: 100%; */
   margin: auto;
   display: block;
 } 
@@ -514,7 +556,7 @@ dialog  img{
   max-width: 600px;
   max-height: 480px;
   max-width: 40%;
-  position: relative;
+  position: absolute;
   margin-left: auto;
   margin-right: auto;
   top: -320px;
@@ -658,15 +700,14 @@ nav {
     cursor: pointer;
   }
 
-  .dialog-image-div{
+  /* .dialog-image-div{
 display: none;
-  }
+  } */
   
   dialog  img{
     max-width: 500px;
     max-height: 380px;
     max-width: 40%;
-    position: fixed;
     top: 50px;
     margin-left: auto;
     margin-right: auto;
