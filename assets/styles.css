@@ -315,6 +315,22 @@ p, a{
   animation-delay: 4s;
 }
 
+/*  
+sources used:
+https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timing-function
+this source was helpful as it taught me about the different types of animation-timing-function and which each one does.
+I expeirented with different ones to see which would be best for my lily pad animations. 
+since  this was a piece of feedback i recieved from my project 4 grade to make the lily pad animations different, and less
+like they are breathing, I decided to use 4 different animation-timing-functions to make them all different instead of using 
+ease-in-out for all of them. instead, I used ease-in-out for the first one, ease-out for the second one, linear for the third one, and cubic-bezier for the last one.
+
+
+https://www.w3schools.com/cssref/css3_pr_animation-timing-function.php
+this source also helped my knowledge about the different types of animation-timing-function and how they work.
+i learned about cubic bezier and how it is a custom timing function that you can create by using the cubic-bezier() function.
+i learned you can Define your own values in the cubic-bezier function
+Possible values are numeric values from 0 to 1
+*/ 
 
  #channel-blocks li::after {
   content: ''; 
@@ -661,6 +677,14 @@ nav {
     0%, 100% { transform: scale(1); }
     50% { transform: scale(1.8); } 
   }
+
+  /* sources used:
+  https://dev.to/ridoy_hasan/css-transforms-translate-rotate-scale-and-skew-4mbm?
+  https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/skew
+  https://www.joshwcomeau.com/animation/keyframe-animations/
+
+
+  */
 
   .quote p {
     font-size: 1.6em;
