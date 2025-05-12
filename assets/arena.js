@@ -302,7 +302,7 @@ fetch(`https://api.are.na/v2/channels/${channelSlug}?per=100`, { cache: 'no-stor
         data.collaborators.forEach((collaborator) => renderUser(collaborator, channelUsers));
         renderUser(data.user, channelUsers);
 
-     
+
     });
 
    
