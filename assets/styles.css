@@ -32,17 +32,15 @@ body {
   --color--blue: rgb(68, 122, 238);
   --color-dark-blue: rgb(8, 39, 107);
   --color--blue-light: rgb(103, 144, 232);
-  
-  ;       
-  
+
 
   --title-size: 4.2em;
-  --subheading-size: 25px;
-  --subheading-size2: 20px;
-  --body-size: 18px;
+  --subheading-size: 1.4em;
+  --subheading-size2: 1.2em;
+  --body-size: 1.1em;
 
-  --spacing-size: 20px;
-  --spacing-size-body:30px;
+  --spacing-size: 2em;
+  --spacing-size-body:1em;
   --nav-size: 1.2em;
 }
  
@@ -862,4 +860,6 @@ that has a link to the arena page, and i made it sticky so that it is always at 
 feedback:
 - Typesetting could go for another pass, I think some of the ratios/spacing are a little tight and reducing the number of fonts.
 how i addressed it: I only kept 2 fonts ()changed the font sizes of the titles and subheadings to be larger, and made the spacing between them larger as well. (line --)
+
+
 */
