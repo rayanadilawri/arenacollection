@@ -376,8 +376,6 @@ dialog{
 }
 
 dialog img{
-  /* max-height: 100%;
-  max-width: 100%; */
   margin: auto;
   display: block;
 } 
@@ -503,20 +501,33 @@ body:has(dialog[open]){
   display: none;
 }
 
-#show-links-button, #show-video-button, #show-text-button, #show-image-button, #show-all-button {
+#show-links-button,
+#show-video-button,
+#show-text-button,
+#show-image-button,
+#show-all-button {
   font-family: cinzel;
-  padding-left: var(--spacing);
-  padding: 5px;
   font-size: 20px;
+  padding: 5px 20px; 
+  gap: 1em;
+  border-radius: 200px; 
+  border: none; 
+  background-color: var(--color--green-4); 
+  color: var(--color--green-2); 
+  cursor: pointer;
+  margin-right: 12px;
+  transition: background-color 0.3s ease;
+  
 }
 
-#show-links-button:hover, #show-video-button:hover, #show-text-button:hover, #show-image-button:hover, #show-all-button:hover {
-  font-family: cinzel;
-  color: var(--color-dark-blue);
-  font-size: 20px;
-  cursor: url('../images/cursor.png'), auto;
-  text-shadow:2px 1px 1px rgb(43, 71, 141);
+#show-links-button:hover,
+#show-video-button:hover,
+#show-text-button:hover,
+#show-image-button:hover,
+#show-all-button:hover {
+  background-color: var(--color--green-3); 
 }
+
 
 
 .filter-line {
@@ -526,8 +537,6 @@ body:has(dialog[open]){
   width: 100%;  
   height: auto;             
   padding: var(--spacing);  
-  background-color: var(--color--blue-light); 
-  color: var(--color--quartery);  
   }
 
 
@@ -547,7 +556,10 @@ dialog [open] {
   display: grid; 
   grid-template-columns: repeat(2, minmax(0,1fr));
   inset: var(--spacing);
+
 }
+
+
 
 
 /* dialog{
@@ -567,14 +579,7 @@ dialog [open] {
 }
 
 dialog  img{
-  max-width: 600px;
-  max-height: 480px;
-  max-width: 40%;
-  position: absolute;
-  margin-left: auto;
-  margin-right: auto;
-  top: -320px;
-  margin-left: 3%;
+display: none;
 } 
 
 /* .external-link{
@@ -587,6 +592,7 @@ dialog  img{
 dialog p{
   position: relative;
   text-align: left;
+  max-width: 40%;
   width: 80%;
   font-size: 16px;
   color: var(--color--green-4);
@@ -703,9 +709,8 @@ footer {
       display: flex;                     
       justify-content: space-between;   
       width: 100%;                                          
-      padding: var(--spacing);          
-      background-color: var(--color--blue-light);
-      color: var(--color--quartery);
+      padding: 2em;          
+
       
   }
 
@@ -714,7 +719,9 @@ footer {
   }
 
   #show-all-button,  #show-text-button, #show-video-button, #show-image-button, #show-links-button {
-    padding: var(--spacing);
+    padding: 2em;
+    margin-bottom: 1em;
+
   }
   
   #channel-blocks {
@@ -748,13 +755,7 @@ display: none;
   } */
   
   dialog  img{
-    max-width: 500px;
-    max-height: 380px;
-    max-width: 40%;
-    top: 50px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-left: 3%;
+display: none;
   } 
 
   .close{
@@ -857,6 +858,7 @@ i made different float animations, instead of having all of them be under the sa
 - I think you could start with the water lilies and then provide context, rathern than provide a landing moment.
 -and some of the more scripty faces are hard to read at length, and with as much centering. I’d like to see the menu brought down the page, and want the controls there to read as more “button-y.” 
 how i addressed it: deleted the about landing page, and made the lily pad page the index. then I fixed a new header to the top of the page
+made controls more buttony by the padding background color and hover color. (line --)
 that has a link to the arena page, and i made it sticky so that it is always at the top of the page. (line --)
 
 feedback:
