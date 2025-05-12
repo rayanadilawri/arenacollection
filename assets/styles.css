@@ -847,19 +847,28 @@ display: none;
 
 /* recap of what i changed for the second submission:
 1. feedback:
+Staggering these animations with a bit of nth-child counting delays would make it feel less like it is “breathing.” 
 how i addressed it: I added  new animations to the lily pads to make them look like they are more realistic.
+i added nth-child to the lily pads so that they all have different animation timings
 i did this by using different animation-timing-functions for each lily pad, and making them all different. (line --) 
 i made different float animations, instead of having all of them be under the same float animation so i could apply different animation timings to the m(line)
 
 2. feedback:
 - I think you could start with the water lilies and then provide context, rathern than provide a landing moment.
+-and some of the more scripty faces are hard to read at length, and with as much centering. I’d like to see the menu brought down the page, and want the controls there to read as more “button-y.” 
 how i addressed it: deleted the about landing page, and made the lily pad page the index. then I fixed a new header to the top of the page
 that has a link to the arena page, and i made it sticky so that it is always at the top of the page. (line --)
 
-
 feedback:
 - Typesetting could go for another pass, I think some of the ratios/spacing are a little tight and reducing the number of fonts.
+-In the work (as shown), my initial impression is that there are a few too many competing typographic voices here, 
 how i addressed it: I only kept 2 fonts ()changed the font sizes of the titles and subheadings to be larger, and made the spacing between them larger as well. (line --)
 
+feedback:
+-The Lilies background here is competing with the blocks—maybe just the color palette as the visual connection/through-line? 
+how i addressed it: I changed the background color to be a solid color, so every background is a solid color (line --)
 
+feedback:
+I want to see the entire artwork along with the tombstone information.
+how i addressed it: I added the image to the tombstone in the dialog modal so now you see the image and description (line --)
 */
